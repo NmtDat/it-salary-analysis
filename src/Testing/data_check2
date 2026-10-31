@@ -1,0 +1,79 @@
+
+from pathlib import Path
+import pandas as pd
+
+# 1. Xac dinh duong dan du lieu
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = PROJECT_DIR / "data" / "job_descriptions.csv"
+
+# 2. Doc du lieu
+df = pd.read_csv(DATA_PATH)
+
+print("=" * 50)
+print("1. KIEM TRA DU LIEU TONG QUAT")
+print("=" * 50)
+
+print("So dong:", len(df))
+print("So cot:", len(df.columns))
+print("So dong trung lap toan bo:", df.duplicated().sum())
+print("So URL trung lap:", df["job_url"].duplicated().sum())
+
+# 3. Kiem tra chuoi rong hoac chi co khoang trang
+print("\n" + "=" * 50)
+print("2. KIEM TRA GIA TRI RONG")
+print("=" * 50)
+
+for col in df.columns:
+    empty_count = (
+        df[col]
+        .astype("string")
+        .str.strip()
+        .eq("")
+        .sum()
+    )
+    print(f"{col}: {empty_count} gia tri rong")
+
+# 4. Thong ke vai tro IT
+print("\n" + "=" * 50)
+print("3. TOP 15 VAI TRO IT")
+print("=" * 50)
+
+print(df["it_role_type"].value_counts().head(15))
+
+# 5. Thong ke thanh pho
+print("\n" + "=" * 50)
+print("4. TOP 10 THANH PHO")
+print("=" * 50)
+
+print(df["city"].value_counts().head(10))
+
+# 6. Kiem tra dinh dang ky nang va ngon ngu
+print("\n" + "=" * 50)
+print("5. MAU NGON NGU LAP TRINH")
+print("=" * 50)
+
+print(df["main_programming_languages"].head(10).to_string(index=False))
+
+print("\n" + "=" * 50)
+print("6. MAU CONG NGHE")
+print("=" * 50)
+
+print(df["key_technologies"].head(10).to_string(index=False))
+
+# 7. Luu bao cao thong ke
+REPORT_DIR = PROJECT_DIR / "reports"
+REPORT_DIR.mkdir(parents=True, exist_ok=True)
+
+df["it_role_type"].value_counts().to_csv(
+    REPORT_DIR / "role_counts.csv",
+    header=["count"],
+    encoding="utf-8-sig"
+)
+
+df["city"].value_counts().to_csv(
+    REPORT_DIR / "city_counts.csv",
+    header=["count"],
+    encoding="utf-8-sig"
+)
+
+print("\nDa luu thong ke vao thu muc reports.")

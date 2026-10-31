@@ -1,0 +1,46 @@
+
+from pathlib import Path
+import pandas as pd
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_FILE = ROOT_DIR / "data" / "VietJobs.csv"
+
+df = pd.read_csv(DATA_FILE, low_memory=False)
+
+print("Kích thước dataset:", df.shape)
+
+print("\nTên các cột:")
+print(df.columns.tolist())
+
+print("\nNăm dòng đầu tiên:")
+print(df.head())
+
+print("\nThông tin dữ liệu:")
+df.info()
+
+# Các cột quan trọng cho bài toán dự đoán lương
+important_columns = [
+    "job_title",
+    "location",
+    "technical_skills",
+    "experience_required",
+    "salary_min",
+    "salary_max",
+    "salary_avg",
+    "category",
+]
+
+print("\nKiểm tra cột cần thiết:")
+for column in important_columns:
+    if column in df.columns:
+        print(f"{column}: có")
+    else:
+        print(f"{column}: không có")
+
+print("\nTỷ lệ thiếu dữ liệu:")
+print(
+    df[[
+        col for col in important_columns
+        if col in df.columns
+    ]].isna().mean().sort_values(ascending=False)
+)

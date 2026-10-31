@@ -1,0 +1,60 @@
+
+from pathlib import Path
+import joblib
+import pandas as pd
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+MODEL_FILE = ROOT_DIR / "models" / "salary_random_forest.joblib"
+
+# Nạp mô hình đã huấn luyện
+model = joblib.load(MODEL_FILE)
+
+print("=" * 50)
+print("      CÔNG CỤ TƯ VẤN LƯƠNG NGÀNH CNTT")
+print("=" * 50)
+
+# Nhập thông tin người dùng
+job_title = input("Nhập chức danh (VD: Backend Developer): ").strip()
+location = input("Nhập địa điểm (VD: Hà Nội): ").strip()
+
+while True:
+    try:
+        experience = float(input("Số năm kinh nghiệm: "))
+
+        if experience < 0:
+            print("Kinh nghiệm không được âm. Vui lòng nhập lại.")
+            continue
+
+        break
+    except ValueError:
+        print("Vui lòng nhập một số hợp lệ.")
+
+skills = input(
+    "Nhập kỹ năng, phân cách bằng dấu phẩy (VD: Python, SQL, Docker): "
+).strip()
+
+# Tạo dữ liệu đầu vào theo đúng cấu trúc lúc huấn luyện
+user_data = pd.DataFrame(
+    [
+        {
+            "job_title": job_title or "Không rõ",
+            "location": location or "Không rõ",
+            "experience_years": experience,
+            "technical_skills": skills,
+        }
+    ]
+)
+
+# Dự đoán
+predicted_salary = model.predict(user_data)[0]
+
+print("\n" + "=" * 50)
+print("KẾT QUẢ TƯ VẤN")
+print("=" * 50)
+print(f"Chức danh: {job_title or 'Không rõ'}")
+print(f"Địa điểm: {location or 'Không rõ'}")
+print(f"Kinh nghiệm: {experience:g} năm")
+print(f"Kỹ năng: {skills or 'Chưa cung cấp'}")
+print(f"Lương dự đoán: {predicted_salary:.2f} triệu đồng/tháng")
+print("\nLưu ý: Đây là kết quả tham khảo từ mô hình thử nghiệm,")
+print("không phải cam kết về mức lương thực tế.")

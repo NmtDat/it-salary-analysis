@@ -1,0 +1,54 @@
+
+from pathlib import Path
+import pandas as pd
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+INPUT_FILE = ROOT_DIR / "data" / "tech_jobs_for_model.csv"
+
+df = pd.read_csv(INPUT_FILE, low_memory=False)
+
+print("===== 1. KÍCH THƯỚC DỮ LIỆU =====")
+print("Số dòng:", len(df))
+print("Số cột:", len(df.columns))
+
+print("\n===== 2. KIỂU DỮ LIỆU =====")
+print(df[
+    [
+        "job_title",
+        "location",
+        "technical_skills",
+        "experience_years",
+        "salary_avg_million",
+    ]
+].dtypes)
+
+print("\n===== 3. SỐ GIÁ TRỊ THIẾU =====")
+print(df[
+    [
+        "job_title",
+        "location",
+        "technical_skills",
+        "experience_years",
+        "salary_avg_million",
+    ]
+].isna().sum())
+
+print("\n===== 4. KIỂM TRA TRÙNG LẶP =====")
+print("Số dòng trùng hoàn toàn:", df.duplicated().sum())
+
+print("\n===== 5. PHÂN BỐ KINH NGHIỆM =====")
+print(df["experience_years"].describe())
+
+print("\n===== 6. PHÂN BỐ LƯƠNG =====")
+print(df["salary_avg_million"].describe())
+
+print("\n===== 7. 10 MỨC LƯƠNG CAO NHẤT =====")
+print(
+    df[
+        ["job_title", "location", "experience_years",
+         "technical_skills", "salary_avg_million"]
+    ]
+    .sort_values("salary_avg_million", ascending=False)
+    .head(10)
+    .to_string(index=False)
+)

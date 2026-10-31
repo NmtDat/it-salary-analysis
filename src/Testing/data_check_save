@@ -1,0 +1,38 @@
+
+from pathlib import Path
+import pandas as pd
+
+# Thư mục gốc của project
+ROOT_DIR = Path(__file__).resolve().parent.parent
+REPORT_DIR = ROOT_DIR / "reports"
+
+# Đọc kết quả đã thống kê ở bước 03
+languages = pd.read_csv(REPORT_DIR / "language_counts.csv")
+technologies = pd.read_csv(REPORT_DIR / "technology_counts.csv")
+roles = pd.read_csv(REPORT_DIR / "role_counts_cleaned.csv")
+
+# Hiển thị tên cột để kiểm tra cấu trúc
+print("Cột ngôn ngữ:", languages.columns.tolist())
+print("Cột công nghệ:", technologies.columns.tolist())
+print("Cột vị trí:", roles.columns.tolist())
+
+# Lưu bản sao kết quả phân tích để dùng trong báo cáo
+languages.to_csv(
+    REPORT_DIR / "language_insights.csv",
+    index=False,
+    encoding="utf-8-sig"
+)
+
+technologies.to_csv(
+    REPORT_DIR / "technology_insights.csv",
+    index=False,
+    encoding="utf-8-sig"
+)
+
+roles.to_csv(
+    REPORT_DIR / "role_insights.csv",
+    index=False,
+    encoding="utf-8-sig"
+)
+
+print("\nĐã lưu kết quả phân tích vào thư mục reports.")

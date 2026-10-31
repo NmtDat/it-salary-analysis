@@ -1,0 +1,234 @@
+
+from pathlib import Path
+import ast
+import pandas as pd
+import matplotlib.pyplot as plt
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+
+DATA_FILE = ROOT_DIR / "data" / "tech_jobs_for_model.csv"
+REPORT_DIR = ROOT_DIR / "reports"
+FIGURE_DIR = REPORT_DIR / "figures"
+
+OUTPUT_FILE = REPORT_DIR / "skill_salary_insights.csv"
+CHART_COUNT_FILE = FIGURE_DIR / "top_10_skills_salary_dataset.png"
+CHART_SALARY_FILE = FIGURE_DIR / "skill_median_salary.png"
+
+# Chuẩn hóa các cách viết khác nhau của cùng một kỹ năng.
+SKILL_ALIASES = {
+    "typescript": "TypeScript",
+    "reactjs": "ReactJS",
+    "react.js": "ReactJS",
+    "postgresql": "PostgreSQL",
+    "javascript": "JavaScript",
+    "html": "HTML",
+    "css": "CSS",
+    "python": "Python",
+    "java": "Java",
+    "sql": "SQL",
+    "mysql": "MySQL",
+    "aws": "AWS",
+    "azure": "Azure",
+    "docker": "Docker",
+    "kubernetes": "Kubernetes",
+    "git": "Git",
+    "linux": "Linux",
+    "mongodb": "MongoDB",
+    "oracle": "Oracle",
+    "spring boot": "Spring Boot",
+    ".net": ".NET",
+}
+
+
+def normalize_skill(skill):
+    """Đưa tên kỹ năng về cách viết thống nhất."""
+    skill = str(skill).strip()
+
+    if not skill:
+        return ""
+
+    return SKILL_ALIASES.get(skill.casefold(), skill)
+
+
+def parse_skills(value):
+    """Chuyển dữ liệu kỹ năng thành danh sách."""
+    if pd.isna(value) or not str(value).strip():
+        return []
+
+    try:
+        parsed = ast.literal_eval(str(value))
+
+        if isinstance(parsed, list):
+            skills = parsed
+        else:
+            skills = [parsed]
+
+    except (ValueError, SyntaxError):
+        # Nếu dữ liệu không phải chuỗi dạng danh sách,
+        # thử tách bằng dấu phẩy.
+        skills = str(value).split(",")
+
+    # Chuẩn hóa và loại trùng trong từng tin tuyển dụng.
+    normalized = {
+        normalize_skill(skill)
+        for skill in skills
+        if normalize_skill(skill)
+    }
+
+    return sorted(normalized)
+
+
+def main():
+    # Kiểm tra file dữ liệu đầu vào.
+    if not DATA_FILE.exists():
+        raise FileNotFoundError(
+            f"Không tìm thấy file dữ liệu: {DATA_FILE}"
+        )
+
+    REPORT_DIR.mkdir(parents=True, exist_ok=True)
+    FIGURE_DIR.mkdir(parents=True, exist_ok=True)
+
+    df = pd.read_csv(DATA_FILE)
+
+    required_columns = [
+        "technical_skills",
+        "salary_avg_million",
+    ]
+
+    missing_columns = [
+        col for col in required_columns
+        if col not in df.columns
+    ]
+
+    if missing_columns:
+        raise ValueError(
+            f"Thiếu các cột bắt buộc: {missing_columns}"
+        )
+
+    # Chuẩn hóa lương về kiểu số.
+    df["salary_avg_million"] = pd.to_numeric(
+        df["salary_avg_million"],
+        errors="coerce",
+    )
+
+    df = df[
+        df["salary_avg_million"].notna()
+        & (df["salary_avg_million"] > 0)
+    ].copy()
+
+    # Phân tích kỹ năng trên từng tin tuyển dụng.
+    df["skills_list"] = df["technical_skills"].apply(
+        parse_skills
+    )
+
+    # Mỗi kỹ năng chỉ được tính một lần trong mỗi tin.
+    skill_records = []
+
+    for _, row in df.iterrows():
+        for skill in row["skills_list"]:
+            skill_records.append({
+                "skill": skill,
+                "salary_avg_million": row["salary_avg_million"],
+            })
+
+    if not skill_records:
+        print("Không tìm thấy kỹ năng hợp lệ trong dữ liệu.")
+        return
+
+    skill_df = pd.DataFrame(skill_records)
+
+    # Thống kê số tin, lương trung vị và lương trung bình.
+    insights = (
+        skill_df.groupby("skill")
+        .agg(
+            job_count=("salary_avg_million", "size"),
+            median_salary=("salary_avg_million", "median"),
+            mean_salary=("salary_avg_million", "mean"),
+        )
+        .reset_index()
+    )
+
+    # Chỉ giữ kỹ năng xuất hiện ít nhất 5 tin.
+    insights = insights[
+        insights["job_count"] >= 5
+    ].copy()
+
+    insights = insights.sort_values(
+        ["job_count", "median_salary"],
+        ascending=[False, False],
+    )
+
+    insights.to_csv(
+        OUTPUT_FILE,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
+    print("=" * 55)
+    print("THỐNG KÊ KỸ NĂNG VÀ MỨC LƯƠNG")
+    print("=" * 55)
+    print(f"Số tin tuyển dụng hợp lệ: {len(df)}")
+    print(f"Số kỹ năng đủ điều kiện: {len(insights)}")
+    print(f"Đã lưu bảng thống kê: {OUTPUT_FILE}")
+
+    print("\nTop 10 kỹ năng theo số tin tuyển dụng:")
+    print(
+        insights.sort_values(
+            "job_count",
+            ascending=False,
+        )
+        .head(10)
+        .to_string(index=False)
+    )
+
+    # Biểu đồ 1: Top 10 kỹ năng theo số tin tuyển dụng.
+    top_count = insights.nlargest(10, "job_count")
+    top_count = top_count.sort_values("job_count")
+
+    plt.figure(figsize=(10, 6))
+    plt.barh(
+        top_count["skill"],
+        top_count["job_count"],
+    )
+    plt.title("Top 10 kỹ năng được yêu cầu nhiều nhất")
+    plt.xlabel("Số tin tuyển dụng")
+    plt.ylabel("Kỹ năng")
+    plt.tight_layout()
+    plt.savefig(CHART_COUNT_FILE, dpi=150)
+    plt.close()
+
+    # Biểu đồ 2: Top 10 kỹ năng có lương trung vị cao nhất,
+    # chỉ xét kỹ năng xuất hiện ít nhất 10 tin.
+    salary_candidates = insights[
+        insights["job_count"] >= 10
+    ]
+
+    top_salary = salary_candidates.nlargest(
+        10,
+        "median_salary",
+    ).sort_values("median_salary")
+
+    plt.figure(figsize=(10, 6))
+    plt.barh(
+        top_salary["skill"],
+        top_salary["median_salary"],
+    )
+    plt.title("Top 10 kỹ năng có mức lương trung vị cao")
+    plt.xlabel("Lương trung vị (triệu đồng, theo dữ liệu)")
+    plt.ylabel("Kỹ năng")
+    plt.tight_layout()
+    plt.savefig(CHART_SALARY_FILE, dpi=150)
+    plt.close()
+
+    print(f"\nĐã lưu biểu đồ: {CHART_COUNT_FILE}")
+    print(f"Đã lưu biểu đồ: {CHART_SALARY_FILE}")
+
+    print(
+        "\nLưu ý: Lương trung vị là mức lương của các tin "
+        "có nhắc đến kỹ năng đó, không chứng minh kỹ năng "
+        "đó trực tiếp làm tăng lương."
+    )
+
+
+if __name__ == "__main__":
+    main()

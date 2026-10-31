@@ -1,0 +1,845 @@
+﻿skill,job_count,median_salary,mean_salary
+Java,49,25.0,27.6531
+Python,41,24.0,27.2073
+Git,40,24.0,24.1125
+Docker,37,25.0,29.0
+JavaScript,29,20.0,22.8621
+HTML,28,20.5,21.9107
+CSS,28,20.0,20.5893
+SQL,25,22.0,23.46
+Kubernetes,25,25.0,29.18
+PostgreSQL,23,22.5,23.913
+MySQL,22,21.5,20.9545
+Oracle,20,26.5,26.7
+MongoDB,20,24.0,25.325
+AWS,20,27.5,30.65
+ReactJS,18,24.0,27.75
+Javascript,16,23.0,27.8438
+Angular,15,23.0,23.2667
+Redis,13,22.0,20.8462
+SQL Server,13,20.0,21.5
+Spring Boot,13,24.0,25.9231
+C#,13,22.5,22.3462
+PHP,13,20.5,22.9615
+Linux,13,24.0,27.4231
+CI/CD,12,23.25,24.5417
+Jira,12,23.5,26.5833
+Node.js,11,20.0,23.3636
+RESTful API,11,22.5,22.2273
+Azure,10,26.5,28.95
+.NET,10,26.0,28.0
+Grafana,10,27.5,29.95
+Flutter,10,19.25,20.7
+Kafka,10,22.5,27.55
+Prometheus,9,27.5,29.9444
+HTML5,9,25.0,24.2778
+Microservices,9,23.0,29.1667
+GCP,8,25.25,28.9375
+CSS3,8,24.5,23.5625
+Jenkins,8,32.5,32.75
+NoSQL,8,22.0,23.5625
+NodeJS,8,26.5,30.3125
+RabbitMQ,8,25.0,29.875
+Kiểm thử phần mềm,7,20.0,19.4286
+Java Spring Boot,7,24.0,25.0
+Microservice,7,28.0,30.2143
+C/C++,7,21.0,26.2857
+Typescript,7,16.5,16.7857
+Terraform,7,30.0,32.5
+Bash,7,25.5,27.2143
+TypeScript,7,20.0,20.4286
+Django,7,22.5,24.7143
+RESTful APIs,6,28.25,25.4167
+NestJS,6,21.0,24.0833
+OOP,6,20.5,22.25
+Go,6,27.5,34.0833
+.Net,6,34.0,33.0833
+ELK Stack,6,26.25,25.0
+Dart,6,21.75,22.4167
+SVN,6,29.75,29.0
+Agile,6,22.0,22.0833
+Ansible,6,27.75,28.8333
+API,6,25.0,23.4167
+Bootstrap,5,20.0,20.0
+React,5,25.0,19.3
+Redux,5,20.0,22.4
+jQuery,5,20.0,22.1
+Kotlin,5,25.0,30.3
+Hibernate,5,25.0,24.8
+Flask,5,22.0,20.6
+Swift,4,31.25,36.375
+Entity Framework,4,25.75,23.75
+Golang,4,30.0,30.625
+GitLab CI,4,27.5,30.625
+FastAPI,4,22.25,25.375
+React JS,4,26.25,27.5
+Spark,4,37.0,33.75
+Restful API,4,24.0,22.625
+Scrum,4,15.75,19.25
+Spring Framework,4,29.25,29.125
+Zabbix,4,22.5,24.375
+Vue.js,4,18.0,21.875
+VueJS,4,19.25,20.5
+GIT,4,24.75,27.0
+Kiểm thử API,4,20.5,21.25
+Java Core,4,26.75,26.625
+Elasticsearch,4,24.25,27.375
+Odoo,4,24.0,25.25
+Objective-C,4,31.25,36.375
+MariaDB,4,23.75,25.0
+Lập trình CNC,4,15.75,15.5
+Google Cloud,4,27.5,37.25
+API RESTful,3,24.0,25.6667
+Gitlab,3,24.0,26.5
+Express,3,20.0,19.0
+AI,3,16.0,26.1667
+NX,3,12.5,13.3333
+React Native,3,20.0,18.6667
+Shell,3,20.5,20.5
+Sentry,3,27.5,33.3333
+SOAP,3,22.0,25.6667
+Unity,3,15.0,29.1667
+CI/CD pipelines,3,27.5,26.6667
+Windows,3,20.5,30.3333
+noSQL,3,30.5,32.5
+CICD,3,33.0,33.3333
+.NET Core,3,28.5,24.0
+Hyper-V,3,20.5,26.5
+DevOps,3,28.5,34.1667
+Kiểm thử hiệu năng,3,20.0,20.3333
+Databricks,3,37.5,37.1667
+MS SQL,3,32.5,32.5
+PL/SQL,3,25.0,30.0
+Mastercam,3,12.5,13.3333
+Laravel,3,20.0,20.8333
+MUI,3,23.0,23.6667
+NumPy,3,31.0,28.0
+Postgres,3,20.5,18.3333
+Postman,3,22.5,20.5
+React Query,3,23.0,23.6667
+WordPress,2,14.0,14.0
+ASP.NET,2,21.75,21.75
+gRPC,2,28.5,28.5
+Web API,2,24.0,24.0
+Windows Server,2,18.75,18.75
+Đọc hiểu bản vẽ kỹ thuật,2,16.0,16.0
+Android,2,16.5,16.5
+Wireshark,2,35.0,35.0
+XGBoost,2,32.25,32.25
+C++,2,19.75,19.75
+"Bảo mật hệ thống: Có kinh nghiệm về firewall, fail2ban, iptables, SSL, VPN, phân quyền user",2,13.5,13.5
+SQLSERVER,2,25.75,25.75
+Splunk,2,35.0,35.0
+Android Studio,2,22.25,22.25
+Angular JS,2,35.0,35.0
+Spring Security,2,28.75,28.75
+SpringBoot,2,33.5,33.5
+Springboot,2,21.75,21.75
+Taiwindcss,2,23.0,23.0
+ThreeJS,2,23.0,23.0
+Tensorflow,2,24.75,24.75
+UI/UX design,2,14.25,14.25
+Trello,2,9.75,9.75
+Spring Data,2,28.75,28.75
+AutoCAD,2,17.25,17.25
+"Backup & Restore: Thiết lập lịch backup tự động cho mail, database, file; lưu trữ định kỳ",2,13.5,13.5
+Automation,2,20.0,20.0
+Sonarqube,2,26.0,26.0
+Selenium,2,19.25,19.25
+Spring,2,27.75,27.75
+Vue,2,12.25,12.25
+Redmine,2,19.0,19.0
+Reactjs,2,23.5,23.5
+Ruby,2,22.75,22.75
+Redux toolkit,2,23.0,23.0
+Ruby on Rails,2,41.0,41.0
+SQLServer,2,31.75,31.75
+SQLite,2,24.0,24.0
+"SCM (Git, SVN)",2,23.5,23.5
+Scikit-learn,2,32.25,32.25
+Seaborn,2,31.0,31.0
+NLP,2,24.75,24.75
+Nagios,2,20.25,20.25
+Mobile testing,2,25.5,25.5
+Mongodb,2,20.0,20.0
+NextJS,2,24.0,24.0
+Next.js,2,25.0,25.0
+Coroutines,2,26.75,26.75
+"Quản lý database server: Biết tối thiểu về MySQL/PostgreSQL, backup và phục hồi dữ liệu",2,13.5,13.5
+Pytorch,2,24.75,24.75
+Puppet,2,25.25,25.25
+REST API,2,32.5,32.5
+Quản trị hệ điều hành server: Thành thạo Linux (Ubuntu/CentOS) và/hoặc Windows Server,2,13.5,13.5
+Cloud,2,36.0,36.0
+"Quản lý mạng nội bộ & kết nối Data Center: Cấu hình IP tĩnh, NAT, port forwarding, quản lý switch/router cơ bản",2,13.5,13.5
+Oracle BI,2,25.0,25.0
+Containerization,2,33.5,33.5
+Performance test,2,23.0,23.0
+Pandas,2,31.0,31.0
+OpenCV,2,21.5,21.5
+"Cài đặt & cấu hình mail server: Ưu tiên có kinh nghiệm với Zimbra, Mailcow, iRedMail hoặc Exchange",2,13.5,13.5
+MobX,2,21.75,21.75
+Metasploit,2,35.0,35.0
+LightGBM,2,32.25,32.25
+MVC,2,28.75,28.75
+Machine Learning,2,14.25,14.25
+Matplotlib,2,31.0,31.0
+Memcached,2,20.25,20.25
+DNS,2,18.75,18.75
+MVVM,2,24.25,24.25
+Nextjs,2,23.5,23.5
+"Database (SQL, NoSQL)",2,22.75,22.75
+Datadog,2,27.5,27.5
+Design Pattern,2,16.75,16.75
+Jest,2,22.25,22.25
+"ETL tools (Pentaho, Datastage)",2,25.0,25.0
+Java core,2,33.5,33.5
+JavaScript/TypeScript,2,25.75,25.75
+JavaScript (ES6+),2,27.5,27.5
+JSON,2,25.0,25.0
+"IDE (Eclipse, IntelliJ, NetBeans)",2,23.5,23.5
+ETL,2,36.25,36.25
+Drivers,2,20.5,20.5
+ExpressJS,2,27.5,27.5
+GraphQL,2,27.5,27.5
+Github,2,22.25,22.25
+"Giám sát hệ thống: Biết sử dụng Nagios, Zabbix, Grafana hoặc bash script theo dõi log",2,13.5,13.5
+GitLab,2,25.5,25.5
+GitLab CI/CD,2,33.75,33.75
+GitHub,2,30.0,30.0
+Firebase,2,27.5,27.5
+Figma,2,17.5,17.5
+API testing,2,20.0,20.0
+"API (Restful, SOAP)",2,23.5,23.5
+.Net Core,2,40.0,40.0
+ảo hoá Vmware vSphere/Hyper-V,1,20.5,20.5
+.NET MVC,1,45.0,45.0
+.NetCore,1,23.0,23.0
+AD,1,17.5,17.5
+AJAX,1,28.5,28.5
+AKS,1,35.0,35.0
+API Gateway,1,35.0,35.0
+macOS,1,20.0,20.0
+load balancing,1,41.5,41.5
+inter-process communication,1,21.0,21.0
+iOS,1,15.0,15.0
+hệ điều hành,1,17.0,17.0
+hệ thống ảo hóa VMWare,1,17.0,17.0
+Amazon Web Services,1,70.0,70.0
+Alphacam,1,14.0,14.0
+Aliyun,1,25.5,25.5
+Ajax,1,20.0,20.0
+"Ads SDK (AdMob, Unity Ads)",1,15.0,15.0
+Admob,1,35.0,35.0
+ActiveMQ,1,22.0,22.0
+AWS/Azure security services,1,50.0,50.0
+AWS IoTCore,1,20.0,20.0
+ASP.NET MVC,1,23.0,23.0
+Git Flow,1,20.0,20.0
+"Giao thức mạng Layer 2 & Layer 3: STP, LACP, M-LAG, OSPF, BGP",1,35.0,35.0
+Gia công cơ khí,1,20.0,20.0
+Gensim,1,22.0,22.0
+G-code,1,18.5,18.5
+FusionPBX,1,31.5,31.5
+Freeswitch,1,31.5,31.5
+FreePBX,1,31.5,31.5
+Fortinet,1,32.5,32.5
+Flow,1,32.5,32.5
+Flipper,1,26.0,26.0
+Firewall Management,1,50.0,50.0
+Firewall,1,25.0,25.0
+Fetch,1,20.0,20.0
+wagmi,1,25.0,25.0
+vmware esxi,1,20.5,20.5
+EnvisionProject,1,25.0,25.0
+Entity Framework Core ORM,1,28.5,28.5
+Entity Framework Core,1,12.5,12.5
+Enterprise Linux,1,40.0,40.0
+HTML/CSS3/DOM,1,30.0,30.0
+HTML/CSS,1,30.0,30.0
+HP-UX,1,40.0,40.0
+HBase,1,25.0,25.0
+HAProxy,1,17.5,17.5
+Gulp,1,20.0,20.0
+Grunt,1,20.0,20.0
+Graylog,1,50.0,50.0
+GoogleMapSDK,1,25.0,25.0
+Good knowledge of document management systems and workflow support services,1,21.5,21.5
+GitOps,1,35.0,35.0
+GitHub Actions,1,17.5,17.5
+Hiểu biết về hệ thống máy tính,1,12.5,12.5
+"Hiểu biết tốt về máy tính, thiết bị di động và các sản phẩm công nghệ khác",1,15.5,15.5
+Hash table,1,40.0,40.0
+Hardening,1,25.0,25.0
+Hadoop Eco-System,1,22.0,22.0
+Hadoop,1,22.0,22.0
+HTTP,1,20.0,20.0
+Fast API,1,12.5,12.5
+FOTA,1,20.0,20.0
+FFMpeg,1,21.0,21.0
+Extraction Techniques,1,22.0,22.0
+Express.js,1,24.0,24.0
+Experience with Mobile Device Management (MDM) tools such as Jamf,1,21.5,21.5
+Exchange server Hybrid,1,17.5,17.5
+Exchange Online,1,41.5,41.5
+Excel,1,23.5,23.5
+"Infrastructure as Code (Terraform, Ansible)",1,60.0,60.0
+Incident Response,1,50.0,50.0
+In-App Purchases,1,35.0,35.0
+Image-Processing Eco-System,1,22.0,22.0
+ISO 9001:2008,1,27.5,27.5
+IPC,1,33.5,33.5
+IMU,1,15.0,15.0
+IBM DWH,1,39.0,39.0
+Hệ điều hành Windows,1,11.5,11.5
+Hệ điều hành Linux,1,11.5,11.5
+Hệ thống phần cứng máy vi tính,1,17.5,17.5
+"Hệ thống mạng LAN, WAN",1,10.5,10.5
+"Hệ thống ERP, MES",1,32.5,32.5
+Hệ thống CRM,1,14.5,14.5
+Hệ quản trị CSDL,1,23.5,23.5
+Html/Css,1,13.0,13.0
+Elastic search,1,35.0,35.0
+Eclipse,1,40.0,40.0
+Echart,1,20.0,20.0
+EVPN,1,30.0,30.0
+ETL pipelines,1,40.0,40.0
+ESLint,1,27.5,27.5
+ELK,1,50.0,50.0
+EKS,1,35.0,35.0
+EE,1,30.5,30.5
+EC2,1,35.0,35.0
+Docker Compose,1,22.5,22.5
+JMeter,1,11.0,11.0
+JFrog,1,30.0,30.0
+Inventor,1,14.0,14.0
+Interface builder,1,30.0,30.0
+Intellij,1,15.0,15.0
+Kinh nghiệm sử dụng phần mềm Postman để test API,1,17.5,17.5
+Kinh nghiệm làm việc với hệ thống ERP,1,12.5,12.5
+Kinh nghiệm làm dự án/ bài tập lớn về C++,1,6.0,6.0
+Kinh nghiệm automation test,1,17.5,17.5
+Keyword Extraction,1,22.0,22.0
+Keras,1,22.0,22.0
+Kali Linux,1,50.0,50.0
+KVM,1,25.5,25.5
+K8s,1,22.5,22.5
+K8S,1,25.0,25.0
+Jquery,1,45.0,45.0
+Jetpack Compose,1,32.5,32.5
+Javascript/Typescript,1,30.0,30.0
+Javascript ES5/ES6+,1,27.5,27.5
+Java core Back-End,1,40.0,40.0
+JSP,1,22.5,22.5
+Kiểm thử app và web,1,25.0,25.0
+Kiểm thử Web,1,24.0,24.0
+Kiểm thử Mobile App,1,24.0,24.0
+Kiến thức vững chắc về an ninh mạng,1,20.0,20.0
+Kiến thức về thuật toán,1,4.0,4.0
+Kiến thức về test game,1,10.0,10.0
+Kiến thức về test dự án thực tế,1,12.5,12.5
+Kiến thức về quy trình phát triển phần mềm,1,17.5,17.5
+Kiến thức về quy trình kiểm thử và các phương pháp kiểm thử,1,17.5,17.5
+Kiến thức về gia công cơ khí,1,15.0,15.0
+Kiến thức về Design Pattern,1,4.0,4.0
+Kiến thức nền tảng về công nghệ thông tin và phát triển phần mềm,1,13.0,13.0
+Kiến thức nền tảng về Network,1,30.0,30.0
+"Kiến thức chuyên môn vững chắc trong lĩnh vực CNTT, thiết kế, điện tử viễn thông, truyền thông đa phương tiện",1,5.0,5.0
+Kinh nghiệm trong các dự án về AI,1,13.0,13.0
+Kinh nghiệm test ít nhất 1 năm,1,12.5,12.5
+Kỹ năng Microsoft Office tốt,1,15.5,15.5
+Kế hoạch kiểm thử,1,10.0,10.0
+Kubernetes (K8s),1,35.0,35.0
+Kubeflow,1,22.0,22.0
+Knowledge Graph,1,22.0,22.0
+Kiểm thử tích hợp API,1,23.5,23.5
+DevOps Associate,1,35.0,35.0
+Design pattern,1,22.5,22.5
+Dependency Injection,1,15.0,15.0
+Database testing,1,21.0,21.0
+Database maintenance,1,15.0,15.0
+Database Oracle/SQL,1,24.0,24.0
+Database,1,30.0,30.0
+Data Warehouse,1,37.5,37.5
+Data Structures & Algorithm,1,35.0,35.0
+Kiểm thử chức năng,1,21.0,21.0
+Lập trình 2D+3D,1,15.0,15.0
+Loki,1,45.0,45.0
+Load Balancer,1,20.5,20.5
+Linux/Unix,1,20.0,20.0
+Linux terminal,1,20.0,20.0
+Linux systems (Ubuntu/Debian),1,20.0,20.0
+Linux kernel,1,20.0,20.0
+Linux environments,1,25.0,25.0
+Linux Kernel,1,21.0,21.0
+"Linux (Ubuntu, CentOS)",1,20.5,20.5
+Lemmatization,1,22.0,22.0
+Lambda,1,35.0,35.0
+LIDAR,1,15.0,15.0
+LAN/WAN technologies,1,29.0,29.0
+LAN,1,32.5,32.5
+Kỹ thuật kiểm thử hộp đen,1,5.0,5.0
+"Lập trình ứng dụng di động (Android, iOS)",1,16.0,16.0
+"Lập trình và vận hành máy tiện, phay CNC",1,12.5,12.5
+Lập trình và cấu hình hệ thống BMS/ELV,1,7.5,7.5
+Lập trình máy móc,1,12.5,12.5
+Lập trình máy CNC,1,10.5,10.5
+Lập trình hệ thống điều khiển chiếu sáng,1,25.0,25.0
+Lập trình hướng đối tượng,1,4.0,4.0
+Lập trình gia công chi tiết cho máy CNC,1,12.0,12.0
+Lập trình chương trình cho máy chạy,1,14.0,14.0
+Lập trình backend,1,22.5,22.5
+"Lập trình Web (Front-end, Back-end)",1,16.0,16.0
+Lập trình Web,1,31.5,31.5
+Lập trình Mastercam,1,20.0,20.0
+Lập trình Game 3D bằng Unity,1,4.0,4.0
+Lập trình CNC bằng Mastercam,1,18.5,18.5
+Lập trình CAM,1,22.5,22.5
+Cấu hình thiết bị switch,1,12.0,12.0
+Manual Testing,1,24.0,24.0
+Malware Analysis,1,50.0,50.0
+Mail server,1,20.5,20.5
+MYSQL,1,28.5,28.5
+MSSQL Server,1,30.0,30.0
+MS SQL server,1,29.5,29.5
+MS SQL database server,1,41.5,41.5
+MS SQL Server,1,17.5,17.5
+MQTT,1,20.0,20.0
+MQ,1,40.0,40.0
+MPLS,1,30.0,30.0
+"MMP (Appsflyer, Adjust)",1,15.0,15.0
+MLFlow,1,22.0,22.0
+MFC,1,33.5,33.5
+MCSA,1,14.5,14.5
+Media Streaming,1,20.0,20.0
+Maven,1,35.0,35.0
+Material design,1,17.0,17.0
+Data Stage,1,22.0,22.0
+Data Mart,1,37.5,37.5
+Data,1,50.0,50.0
+Dart DevTool,1,26.0,26.0
+Dapper,1,32.5,32.5
+DR,1,41.5,41.5
+DMX,1,25.0,25.0
+DGL,1,22.0,22.0
+DB2,1,39.0,39.0
+DB Oracle,1,40.0,40.0
+DAST,1,22.5,22.5
+Cấu trúc dữ liệu,1,4.0,4.0
+Cấu trúc Dữ liệu,1,18.0,18.0
+My SQL,1,35.0,35.0
+Multithread,1,40.0,40.0
+Multi-processing,1,40.0,40.0
+Multi thread,1,30.0,30.0
+Mulesoft,1,33.0,33.0
+Mockito,1,22.0,22.0
+Minio,1,25.5,25.5
+Middleware,1,29.5,29.5
+Microsoft System solution,1,41.5,41.5
+Microsoft 365,1,17.5,17.5
+Microservice architecture,1,23.5,23.5
+Microprocessor,1,15.0,15.0
+Micronaut,1,25.0,25.0
+Microcontroller Unit (MCU),1,15.0,15.0
+MicroService testing,1,26.5,26.5
+"Message Queue (Kafka, RabbitMQ)",1,22.5,22.5
+Networking,1,21.0,21.0
+"Network security tools (antivirus, spam control, firewall policies)",1,29.0,29.0
+"Network protocols (TCP/IP, DNS, DHCP, etc.)",1,29.0,29.0
+Network Security,1,50.0,50.0
+Network,1,41.5,41.5
+Netezza,1,22.0,22.0
+Netbean,1,40.0,40.0
+Nessus,1,20.0,20.0
+Name Entity Recognition,1,22.0,22.0
+NLTK,1,22.0,22.0
+NAS,1,20.5,20.5
+Mạng máy tính,1,12.0,12.0
+Mạng LAN/WAN,1,32.5,32.5
+Máy chủ nội bộ,1,32.5,32.5
+Máy CNC,1,22.5,22.5
+MySql,1,22.0,22.0
+Có khả năng lên Testcase,1,12.5,12.5
+Các sản phẩm công nghệ khác,1,12.5,12.5
+Cài đặt mail Outlook,1,10.5,10.5
+Cài đặt hệ điều hành và các ứng dụng,1,15.5,15.5
+Cài đặt hệ điều hành Windows Server,1,11.0,11.0
+Cài đặt các phần mềm ứng dụng,1,11.0,11.0
+Cyber Security,1,41.5,41.5
+Node,1,20.0,20.0
+NoSQL databases,1,12.5,12.5
+Nmap,1,50.0,50.0
+"Ngôn ngữ lập trình: C#, Java, SQL",1,32.5,32.5
+Nginx,1,17.5,17.5
+NgRx,1,25.0,25.0
+Nexus,1,30.0,30.0
+New Relic,1,27.5,27.5
+Networks,1,15.0,15.0
+OSWE,1,37.5,37.5
+OSCP,1,37.5,37.5
+ONNX,1,22.0,22.0
+OKR,1,16.5,16.5
+ODI,1,22.0,22.0
+Nutanix,1,41.5,41.5
+"Node.js (NestJS, Express)",1,20.0,20.0
+Node js,1,37.5,37.5
+Cấu hình thiết bị router,1,12.0,12.0
+Cơ sở dữ liệu SQL,1,18.0,18.0
+Cơ sở dữ liệu NoSQL,1,18.0,18.0
+"Công nghệ mạng hiện đại trong DC như: VXLAN, EVPN, Network Automation",1,35.0,35.0
+Công cụ test,1,10.0,10.0
+"Có kiến thức về đồ gỗ, kim loại tấm",1,10.0,10.0
+Có kinh nghiệm triển khai bản vẽ và vận hành máy CNC,1,10.0,10.0
+Có khả năng test qua API,1,12.5,12.5
+Performance testing,1,13.5,13.5
+Pentaho,1,22.0,22.0
+Penetration Testing,1,50.0,50.0
+Paylink,1,33.0,33.0
+Pattern,1,22.0,22.0
+PRTG,1,17.5,17.5
+PLSQL,1,80.0,80.0
+PL SQL,1,29.5,29.5
+Oracle Database,1,23.0,23.0
+Openstack,1,25.5,25.5
+Openshift,1,25.0,25.0
+OpenStack,1,20.0,20.0
+OpenShift,1,30.0,30.0
+OpenGL,1,21.0,21.0
+OpenERP,1,24.0,24.0
+OpenAPI,1,20.0,20.0
+CodeIgniter,1,15.0,15.0
+Cloudwatch,1,35.0,35.0
+CloudWatch,1,35.0,35.0
+CloudFormation,1,35.0,35.0
+"Cloud technologies (AWS: Glue, Athena, S3)",1,37.5,37.5
+"Cloud service (AWS, Azure)",1,40.0,40.0
+Postgre,1,39.0,39.0
+Phần mềm ứng dụng,1,11.5,11.5
+"Phần mềm CAM (như Mastercam, Siemens NX, hoặc SolidCAM)",1,22.5,22.5
+Phần mềm CAM (Mastercam),1,20.0,20.0
+Phần mềm Autocad,1,10.0,10.0
+Phần cứng máy tính,1,12.0,12.0
+Philips Dynalite,1,25.0,25.0
+Phay CNC,1,12.5,12.5
+PgSQL,1,25.0,25.0
+Perl,1,20.5,20.5
+Private cloud,1,50.0,50.0
+PowerShell,1,50.0,50.0
+Power Shell,1,35.0,35.0
+Power BI,1,37.5,37.5
+Postgress,1,23.0,23.0
+Postgresql Server,1,45.0,45.0
+PostgresQL,1,25.0,25.0
+PostgresDB,1,25.0,25.0
+Coverity,1,30.0,30.0
+CoreNLP,1,22.0,22.0
+CoreData,1,30.0,30.0
+Core Animation,1,30.0,30.0
+Content Master,1,3.0,3.0
+Confluence,1,33.0,33.0
+Computer hardware,1,15.0,15.0
+Computer Vision,1,27.5,27.5
+Quản trị hệ thống server,1,14.0,14.0
+Quản trị hệ thống mạng,1,14.0,14.0
+Quản trị hệ thống CNTT,1,20.5,20.5
+"Quản trị các hệ thống của MS như AD, DNS, DHCP, file, TMG",1,10.5,10.5
+Quản lý an toàn thông tin,1,20.0,20.0
+Quy trình gia công cơ khí,1,22.5,22.5
+Quy trình Test,1,10.0,10.0
+Qlik,1,37.5,37.5
+QA,1,27.5,27.5
+Python (FastAPI),1,20.0,20.0
+"Python (Django, FastAPI, Flask)",1,20.0,20.0
+Pytest,1,22.0,22.0
+PyTorch,1,22.0,22.0
+PyG,1,22.0,22.0
+Provider,1,20.0,20.0
+Proficient and experienced with Apple products and the macOS operating system,1,21.5,21.5
+REST-full,1,30.0,30.0
+R,1,37.5,37.5
+Cloud Solution Associate,1,35.0,35.0
+"Cloud (AWS, GCP, Azure)",1,20.0,20.0
+Citrix,1,41.5,41.5
+Cisco,1,32.5,32.5
+Cimatron,1,12.5,12.5
+"Chỉnh sửa Edit video (Capcut, Canvas, Photoshop)",1,3.0,3.0
+Chẩn đoán và giải quyết các vấn đề kỹ thuật,1,15.5,15.5
+"Chạy quảng cáo (Facebook, Google, Tiktok)",1,3.0,3.0
+Chiến lược và kỹ thuật test,1,10.0,10.0
+Chef,1,25.0,25.0
+Checkpoint,1,32.5,32.5
+Checklist,1,8.5,8.5
+CassandraDB,1,16.0,16.0
+Canvas,1,27.5,27.5
+Rest,1,20.0,20.0
+Report bug,1,8.5,8.5
+Redshift,1,39.0,39.0
+Redis Cache,1,45.0,45.0
+Recoil,1,20.0,20.0
+Realm,1,30.0,30.0
+ReactJs,1,12.5,12.5
+React.js,1,30.0,30.0
+React js,1,23.0,23.0
+React Testing Library,1,27.5,27.5
+Rapid,1,22.0,22.0
+Rabbitmq,1,23.0,23.0
+Rabbit MQ,1,45.0,45.0
+ROS,1,70.0,70.0
+RESTful web services,1,25.0,25.0
+RESTAPI,1,18.5,18.5
+CEPH,1,25.5,25.5
+CEH,1,37.5,37.5
+CCNP,1,30.0,30.0
+CCIE,1,30.0,30.0
+RxJS,1,17.0,17.0
+Run testcase,1,8.5,8.5
+Route53,1,35.0,35.0
+Robot Operating System (ROS),1,15.0,15.0
+Risk Assessment,1,50.0,50.0
+Reverse Engineering,1,50.0,50.0
+Retrofit,1,15.0,15.0
+RestfulAPI,1,22.0,22.0
+Restful APIs,1,60.0,60.0
+Restful,1,22.0,22.0
+RestFul Api,1,12.5,12.5
+Rest API,1,22.5,22.5
+SCCM/SCOM,1,41.5,41.5
+SCA,1,22.5,22.5
+SAST,1,22.5,22.5
+SASS/SCSS,1,24.0,24.0
+SAP,1,32.5,32.5
+SAN storage,1,20.5,20.5
+S3,1,35.0,35.0
+RxJava,1,21.0,21.0
+CSS Framework,1,16.5,16.5
+"CSS (SASS, LESS, Critical)",1,40.0,40.0
+CSDL,1,17.0,17.0
+CREO,1,17.5,17.5
+CMMI,1,27.5,27.5
+CISAM,1,33.5,33.5
+"CI/CD tools (Gitlab CI, Weave Flux, Spinnaker)",1,60.0,60.0
+"CI/CD (Jenkins, Gitlab CI)",1,35.0,35.0
+Bitbucket,1,20.0,20.0
+Big Data,1,35.0,35.0
+Bash Shell,1,35.0,35.0
+Security,1,41.5,41.5
+Scikit-Learn,1,22.0,22.0
+SciPy,1,22.0,22.0
+SWR,1,25.0,25.0
+SVG,1,27.5,27.5
+SQlite,1,30.0,30.0
+"SQL & NoSQL (PostgreSQL, MySQL, MongoDB, Redis)",1,20.0,20.0
+SOLID,1,15.0,15.0
+SEO optimization techniques,1,19.5,19.5
+SEO Websites,1,3.0,3.0
+SELinux,1,25.0,25.0
+SDWAN,1,30.0,30.0
+SDN,1,30.0,30.0
+Servlet,1,22.5,22.5
+Server,1,20.5,20.5
+Sentiment Analysis,1,22.0,22.0
+Semgrep,1,30.0,30.0
+Segment Routing,1,30.0,30.0
+Security-as-Code,1,22.5,22.5
+Security Architecture,1,50.0,50.0
+"Security (quét lỗ hổng mã nguồn, mã hóa mã nguồn, container security, network security)",1,35.0,35.0
+C++/C#,1,35.0,35.0
+C language,1,33.5,33.5
+Bảo mật hệ thống,1,20.0,20.0
+Burp Suite,1,50.0,50.0
+Bloc,1,20.0,20.0
+Blazor,1,25.0,25.0
+BlackDuck,1,30.0,30.0
+Biết sử dụng 1 vài tool quản lý bug,1,8.5,8.5
+AutoCAD 3D,1,14.0,14.0
+AutoCAD 2D,1,14.0,14.0
+Spring MVC,1,22.5,22.5
+Spring Data JPA,1,25.0,25.0
+Spring Cloud,1,40.0,40.0
+Spring Boot Framework,1,27.5,27.5
+Sonar Qube,1,35.0,35.0
+SolidCAM,1,10.5,10.5
+Software testing processes,1,13.5,13.5
+Software,1,15.0,15.0
+Socket TCP/IP,1,22.0,22.0
+Snowflake,1,70.0,70.0
+Snagit,1,23.5,23.5
+SignalR,1,45.0,45.0
+Shared Preferences,1,26.0,26.0
+Shared Memory,1,33.5,33.5
+Storage,1,15.0,15.0
+Stemming,1,22.0,22.0
+"State management (Provider, Bloc)",1,23.5,23.5
+"State Management (Provider, Bloc, GetX)",1,35.0,35.0
+"State Management (Provider, Bloc)",1,26.0,26.0
+Spring cloud Framework,1,35.0,35.0
+Spring boot,1,25.0,25.0
+Backup and storage solutions,1,41.5,41.5
+Babel,1,27.5,27.5
+BSP Linux,1,18.0,18.0
+BPA,1,33.0,33.0
+Azure SQL,1,35.0,35.0
+Azure Monitor,1,35.0,35.0
+Automation test,1,21.0,21.0
+AutoCad,1,18.5,18.5
+AutoCAD cơ bản,1,11.0,11.0
+Sử dụng phần mềm Camtool,1,12.0,12.0
+"Sử dụng phần mềm CAM (như Mastercam, Fusion 360, Powermill, Nx Cam, Catia Cam)",1,15.0,15.0
+"Sử dụng các tool như serenity, cucumber, Kataion, git, Jenkin",1,22.5,22.5
+Sử dụng các công cụ/ framework hỗ trợ kiểm thử,1,13.0,13.0
+Sử dụng SoapUI,1,23.5,23.5
+Sử dụng Qonversion,1,5.0,5.0
+Sử dụng Postman,1,5.0,5.0
+Sử dụng Jira,1,23.5,23.5
+Sử dụng Google Sheet,1,8.5,8.5
+Sử dụng Firebase,1,5.0,5.0
+System security,1,15.0,15.0
+System Integration Testing,1,24.0,24.0
+System Builder,1,25.0,25.0
+System,1,41.5,41.5
+Swagger,1,22.5,22.5
+"Strong knowledge of operating systems and hardware, especially MacBook and iMac",1,21.5,21.5
+Test API cơ bản,1,5.0,5.0
+Test API,1,21.0,21.0
+Tensorflow Serving,1,22.0,22.0
+TensorFlow,1,22.0,22.0
+Tailwind CSS,1,25.0,25.0
+Tableau,1,37.5,37.5
+TCP/IP,1,20.0,20.0
+Sửa chữa thiết bị phần cứng,1,14.0,14.0
+Sử dụng tool để test API,1,25.0,25.0
+Sử dụng thành thạo phần mềm CAD/CAM,1,15.0,15.0
+Sử dụng thành thạo phần mềm Autocad,1,10.0,10.0
+Sử dụng phần mềm lập trình CNC,1,10.5,10.5
+Sử dụng phần mềm lập trình,1,12.5,12.5
+Sử dụng phần mềm Mastercam Tiện,1,12.5,12.5
+Sử dụng phần mềm Cimatron,1,12.0,12.0
+Sử dụng phần mềm Cimatrol,1,10.5,10.5
+Thiết kế 3D SolidWorks,1,18.5,18.5
+Thiết bị mạng,1,11.5,11.5
+Thiết bị di động,1,12.5,12.5
+Thanos,1,22.0,22.0
+TextBold,1,22.0,22.0
+Text Representation,1,22.0,22.0
+Testing web applications,1,13.5,13.5
+Testing techniques,1,13.5,13.5
+Testing methods,1,13.5,13.5
+TestRail,1,24.0,24.0
+Test-Driven Development,1,19.5,19.5
+Test script,1,20.0,20.0
+Test case,1,20.0,20.0
+Test Reports,1,16.5,16.5
+Test Plans,1,16.5,16.5
+Test Cases,1,16.5,16.5
+VB,1,58.0,58.0
+"Understanding of video conferencing systems, especially Google Meet and Logitech equipment",1,21.5,21.5
+UML,1,31.5,31.5
+UIKIT,1,30.0,30.0
+UI/UX,1,24.0,24.0
+UI components & customization/animation,1,35.0,35.0
+Tạo test data,1,25.0,25.0
+Type Script,1,11.0,11.0
+Ttransformer,1,22.0,22.0
+Truy vấn cơ sở dữ liệu SQL,1,22.5,22.5
+TritonServer,1,22.0,22.0
+Thành thạo công cụ quản lý công việc,1,14.5,14.5
+Thuật toán,1,18.0,18.0
+Threat Intelligence,1,50.0,50.0
+"Thiết kế, lập trình máy CNC",1,15.0,15.0
+Thiết kế điện cực,1,12.0,12.0
+Android SDK,1,21.0,21.0
+Android Jetpack,1,21.0,21.0
+Android Java,1,15.0,15.0
+Android Components,1,15.0,15.0
+Vocabulary,1,22.0,22.0
+Vmware,1,20.5,20.5
+Viết tài liệu test,1,25.0,25.0
+Viết test case,1,8.5,8.5
+Viết kịch bản kiểm thử,1,22.5,22.5
+Viết các trường hợp kiểm thử,1,10.0,10.0
+Viết bug,1,8.5,8.5
+VPN server,1,20.5,20.5
+VPN,1,32.5,32.5
+VMware vSphere,1,17.5,17.5
+VMware,1,20.0,20.0
+VBA,1,58.0,58.0
+Vẽ thành thạo AutoCAD,1,11.0,11.0
+Vận hành máy tiện CNC,1,16.5,16.5
+Vận hành máy phay CNC,1,14.0,14.0
+VxLAN,1,30.0,30.0
+Vulnerability Assessment,1,50.0,50.0
+Vuejs,1,11.0,11.0
+VueJs,1,12.5,12.5
+Voice Recognition,1,20.0,20.0
+Asana,1,8.5,8.5
+Artifactory,1,35.0,35.0
+ArgoCD,1,25.0,25.0
+Aras,1,32.5,32.5
+AppArmor,1,25.0,25.0
+Angular/AngularJS,1,40.0,40.0
+Angular Universal,1,25.0,25.0
+Angular (từ version 9 trở lên),1,24.0,24.0
+Xcode,1,18.5,18.5
+XML,1,20.0,20.0
+XCode IDE,1,30.0,30.0
+XCode,1,26.0,26.0
+Word,1,23.5,23.5
+Websocket,1,25.0,25.0
+Webpack,1,27.5,27.5
+WebForm,1,24.0,24.0
+Web socket,1,25.0,25.0
+"Web server (nginx, apache, tomcat)",1,20.5,20.5
+Web Testing,1,30.0,30.0
+Web Socket,1,22.0,22.0
+Web Server,1,17.5,17.5
+Web Application Security,1,50.0,50.0
+WCF,1,30.0,30.0
+WAN,1,32.5,32.5
+ASP.NET Core,1,12.5,12.5
+ARM Azure,1,35.0,35.0
+firewall,1,32.5,32.5
+ethers.js,1,25.0,25.0
+embeddings,1,40.0,40.0
+design pattern,1,15.0,15.0
+clustering,1,41.5,41.5
+cloud-native applications,1,12.5,12.5
+child-process,1,21.0,21.0
+check MK,1,20.5,20.5
+centreon,1,20.5,20.5
+cache,1,40.0,40.0
+automation testing,1,26.5,26.5
+Zustand,1,25.0,25.0
+ZeroMQ,1,70.0,70.0
+Xử lý sự cố máy tính,1,32.5,32.5
+API Testing,1,24.0,24.0
+Đọc và hiểu bản vẽ kỹ thuật,1,12.5,12.5
+Đọc và hiểu bản vẽ,1,15.0,15.0
+Đọc hiểu bảng vẽ gia công,1,16.5,16.5
+.NET Core MVC,1,25.0,25.0
+Đọc bản vẽ gia công,1,14.0,14.0
+Đọc bản vẽ,1,12.5,12.5
+zabbix,1,20.5,20.5
+web3.js,1,25.0,25.0
+nghiên cứu hệ thống,1,17.5,17.5
+"network protocols (TCP/IP, OSI model)",1,32.5,32.5
+n8n opensouce,1,20.0,20.0
+multi-thread,1,21.0,21.0
+mockup API,1,40.0,40.0
+microservices architectures,1,12.5,12.5
+microservices,1,27.5,27.5
+vector databases,1,35.0,35.0
+vector database,1,40.0,40.0
+uni-app,1,20.0,20.0
+threejs,1,70.0,70.0
+system integration testing,1,26.5,26.5
+switching,1,32.5,32.5
+storage SAN,1,20.5,20.5
+socket,1,21.0,21.0
+routing & switching,1,29.0,29.0
+routing,1,32.5,32.5
+responsive web design,1,24.0,24.0
+regression testing,1,26.5,26.5
+react-testing-library,1,17.0,17.0
+php,1,20.5,20.5
+API integration,1,23.5,23.5
+API Web Services,1,40.0,40.0

@@ -1,0 +1,44 @@
+
+from pathlib import Path
+import pandas as pd
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_FILE = ROOT_DIR / "data" / "VietJobs.csv"
+
+df = pd.read_csv(DATA_FILE, low_memory=False)
+
+# 1. Kiểm tra các nhóm ngành
+print("\n===== TOP 30 NHÓM NGÀNH =====")
+print(df["category"].value_counts().head(30).to_string())
+
+# 2. Kiểm tra phân bố lương
+print("\n===== THỐNG KÊ LƯƠNG =====")
+for col in ["salary_min", "salary_max"]:
+    print(f"\n{col}:")
+    print(df[col].describe())
+
+# 3. Kiểm tra các mức lương bất thường
+print("\n===== LƯƠNG BẰNG 0 HOẶC ÂM =====")
+print("salary_min <= 0:", (df["salary_min"] <= 0).sum())
+print("salary_max <= 0:", (df["salary_max"] <= 0).sum())
+print(
+    "salary_min > salary_max:",
+    (df["salary_min"] > df["salary_max"]).sum()
+)
+
+# 4. Kiểm tra định dạng kinh nghiệm
+print("\n===== 30 GIÁ TRỊ KINH NGHIỆM =====")
+print(
+    df["experience_required"]
+    .value_counts(dropna=False)
+    .head(30)
+    .to_string()
+)
+
+# 5. Xem tiêu đề của một số tin tuyển dụng
+print("\n===== 30 TIÊU ĐỀ CÔNG VIỆC =====")
+print(df["job_title"].head(30).to_string(index=False))
+
+# 6. Kiểm tra thông tin lương dạng văn bản
+print("\n===== 20 GIÁ TRỊ LƯƠNG GỐC =====")
+print(df["salary"].head(20).to_string(index=False))

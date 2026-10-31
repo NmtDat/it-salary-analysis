@@ -1,0 +1,322 @@
+
+from pathlib import Path
+
+import pandas as pd
+import joblib
+
+
+# ==================================================
+# 1. ĐƯỜNG DẪN
+# ==================================================
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+MODEL_PATH = BASE_DIR / "models" / "salary_random_forest.joblib"
+SKILL_DATA_PATH = BASE_DIR / "reports" / "skill_salary_insights.csv"
+
+
+# ==================================================
+# 2. CHUẨN HÓA TÊN KỸ NĂNG
+# ==================================================
+
+SKILL_ALIASES = {
+    "typescript": "TypeScript",
+    "javascript": "JavaScript",
+    "reactjs": "ReactJS",
+    "react.js": "ReactJS",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "mongodb": "MongoDB",
+    "spring boot": "Spring Boot",
+    "power bi": "Power BI",
+    "aws": "AWS",
+    "azure": "Azure",
+    "git": "Git",
+    "docker": "Docker",
+    "kubernetes": "Kubernetes",
+    "python": "Python",
+    "java": "Java",
+    "sql": "SQL",
+    "html": "HTML",
+    "css": "CSS",
+    "linux": "Linux",
+    "grafana": "Grafana",
+}
+
+
+def normalize_skill(skill):
+    """Chuẩn hóa cách viết tên kỹ năng."""
+    original = str(skill).strip()
+    normalized = original.casefold()
+
+    return SKILL_ALIASES.get(normalized, original)
+
+
+# ==================================================
+# 3. NẠP MÔ HÌNH VÀ DỮ LIỆU
+# ==================================================
+
+def load_resources():
+    """Nạp mô hình dự đoán lương và dữ liệu kỹ năng."""
+
+    if not MODEL_PATH.exists():
+        raise FileNotFoundError(
+            f"Không tìm thấy mô hình: {MODEL_PATH}"
+        )
+
+    if not SKILL_DATA_PATH.exists():
+        raise FileNotFoundError(
+            f"Không tìm thấy dữ liệu kỹ năng: {SKILL_DATA_PATH}"
+        )
+
+    model = joblib.load(MODEL_PATH)
+    skills_df = pd.read_csv(SKILL_DATA_PATH)
+
+    required_columns = {
+        "skill",
+        "job_count",
+        "median_salary",
+    }
+
+    missing_columns = required_columns - set(skills_df.columns)
+
+    if missing_columns:
+        raise ValueError(
+            f"CSV thiếu cột: {', '.join(sorted(missing_columns))}"
+        )
+
+    # Chuẩn hóa dữ liệu
+    skills_df["skill"] = skills_df["skill"].apply(normalize_skill)
+    skills_df["job_count"] = pd.to_numeric(
+        skills_df["job_count"], errors="coerce"
+    )
+    skills_df["median_salary"] = pd.to_numeric(
+        skills_df["median_salary"], errors="coerce"
+    )
+
+    skills_df = skills_df.dropna(
+        subset=["skill", "job_count", "median_salary"]
+    )
+
+    # Gộp những tên kỹ năng giống nhau sau chuẩn hóa
+    skills_df = (
+        skills_df.groupby("skill", as_index=False)
+        .agg(
+            job_count=("job_count", "sum"),
+            median_salary=("median_salary", "mean"),
+        )
+    )
+
+    return model, skills_df
+
+
+# ==================================================
+# 4. NHẬP THÔNG TIN NGHỀ NGHIỆP
+# ==================================================
+
+def input_career_info():
+    """Nhập thông tin từ bàn phím."""
+
+    print("\n--- NHẬP THÔNG TIN NGHỀ NGHIỆP ---")
+
+    while True:
+        role = input("Vị trí muốn theo đuổi: ").strip()
+
+        if role:
+            break
+
+        print("Vui lòng nhập vị trí nghề nghiệp.")
+
+    while True:
+        location = input(
+            "Khu vực làm việc (VD: Hà Nội): "
+        ).strip()
+
+        if location:
+            break
+
+        print("Vui lòng nhập khu vực làm việc.")
+
+    while True:
+        try:
+            experience = float(
+                input("Số năm kinh nghiệm: ")
+            )
+
+            if experience < 0:
+                print("Kinh nghiệm không được âm.")
+                continue
+
+            break
+
+        except ValueError:
+            print("Vui lòng nhập số hợp lệ, ví dụ: 2")
+
+    skills = input(
+        "Các kỹ năng đã biết, cách nhau bằng dấu phẩy: "
+    ).strip()
+
+    return {
+        "job_title": role,
+        "location": location,
+        "experience_years": experience,
+        "technical_skills": skills,
+    }
+
+
+# ==================================================
+# 5. TƯ VẤN KỸ NĂNG
+# ==================================================
+
+def recommend_skills(skills_df, role, current_skills, top_n=5):
+    """Đề xuất kỹ năng dựa trên vị trí và dữ liệu tuyển dụng."""
+
+    role_skills = {
+        "backend": [
+            "Java", "Python", "SQL", "PostgreSQL",
+            "MySQL", "Docker", "Git", "Spring Boot",
+            "AWS", "Redis",
+        ],
+        "frontend": [
+            "JavaScript", "TypeScript", "HTML",
+            "CSS", "ReactJS", "Git",
+        ],
+        "data analyst": [
+            "Python", "SQL", "Excel", "Power BI",
+            "Tableau", "PostgreSQL",
+        ],
+        "data engineer": [
+            "Python", "SQL", "Docker", "AWS",
+            "PostgreSQL", "Kubernetes",
+        ],
+        "devops": [
+            "Linux", "Docker", "Kubernetes",
+            "AWS", "Azure", "Git", "Grafana",
+        ],
+    }
+
+    role_lower = role.casefold()
+
+    matched_role = next(
+        (
+            key for key in role_skills
+            if key in role_lower
+        ),
+        None,
+    )
+
+    # Chuẩn hóa các kỹ năng người dùng đã biết
+    known_skills = {
+        normalize_skill(skill).casefold()
+        for skill in current_skills.split(",")
+        if skill.strip()
+    }
+
+    df = skills_df.copy()
+
+    # Chuẩn hóa tên kỹ năng trong dữ liệu
+    df["skill"] = df["skill"].apply(normalize_skill)
+    df["skill_normalized"] = df["skill"].str.casefold()
+
+    # Lọc theo vị trí nếu nhận diện được nhóm nghề
+    if matched_role:
+        allowed_skills = {
+            normalize_skill(skill).casefold()
+            for skill in role_skills[matched_role]
+        }
+
+        df = df[
+            df["skill_normalized"].isin(allowed_skills)
+        ]
+
+    # Loại kỹ năng người dùng đã biết
+    df = df[
+        ~df["skill_normalized"].isin(known_skills)
+    ]
+
+    # Sắp xếp theo số tin tuyển dụng, sau đó lương trung vị
+    df = df.sort_values(
+        by=["job_count", "median_salary"],
+        ascending=[False, False],
+    )
+
+    return df[
+        ["skill", "job_count", "median_salary"]
+    ].head(top_n)
+
+
+# ==================================================
+# 6. CHƯƠNG TRÌNH CHÍNH
+# ==================================================
+
+def main():
+    print("=" * 55)
+    print("CÔNG CỤ TƯ VẤN NGHỀ NGHIỆP CNTT")
+    print("=" * 55)
+
+    try:
+        model, skills_df = load_resources()
+
+    except (FileNotFoundError, OSError, ValueError) as error:
+        print(f"\nLỗi khi tải tài nguyên:\n{error}")
+        return
+
+    # Nhập dữ liệu
+    info = input_career_info()
+
+    # Tạo DataFrame đầu vào
+    input_df = pd.DataFrame([info])
+
+    print("\n--- THÔNG TIN ĐÃ NHẬP ---")
+    print(input_df.to_string(index=False))
+
+    # Dự đoán lương
+    try:
+        predicted_salary = float(
+            model.predict(input_df)[0]
+        )
+
+    except (ValueError, TypeError, KeyError) as error:
+        print(f"\nLỗi khi dự đoán lương: {error}")
+        return
+
+    print("\n--- KẾT QUẢ DỰ ĐOÁN LƯƠNG ---")
+    print(f"Vị trí: {info['job_title']}")
+    print(f"Khu vực: {info['location']}")
+    print(f"Kinh nghiệm: {info['experience_years']:.1f} năm")
+    print(
+        f"Lương dự đoán: {predicted_salary:.2f} "
+        "triệu đồng/tháng"
+    )
+
+    # Đề xuất kỹ năng
+    print("\n--- KỸ NĂNG NÊN TÌM HIỂU THÊM ---")
+
+    recommendations = recommend_skills(
+        skills_df,
+        info["job_title"],
+        info["technical_skills"],
+        top_n=5,
+    )
+
+    if recommendations.empty:
+        print("Chưa tìm thấy kỹ năng phù hợp trong dữ liệu.")
+    else:
+        display_df = recommendations.rename(
+            columns={
+                "skill": "Kỹ năng",
+                "job_count": "Số tin tuyển dụng",
+                "median_salary": "Lương trung vị (triệu/tháng)",
+            }
+        )
+
+        print(display_df.to_string(index=False))
+
+    print("\n--- LƯU Ý ---")
+    print("- Lương dự đoán chỉ mang tính tham khảo.")
+    print("- Số tin thể hiện số tin có nhắc đến kỹ năng.")
+    print("- Lương trung vị không đảm bảo thu nhập thực tế.")
+
+
+if __name__ == "__main__":
+    main()

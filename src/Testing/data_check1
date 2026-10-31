@@ -1,0 +1,33 @@
+
+from pathlib import Path
+import pandas as pd
+
+# Xác định đường dẫn dự án
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = PROJECT_DIR / "data" / "job_descriptions.csv"
+
+# Kiểm tra file có tồn tại không
+if not DATA_PATH.exists():
+    print("KHONG TIM THAY FILE:", DATA_PATH)
+else:
+    # Đọc dữ liệu
+    df = pd.read_csv(DATA_PATH)
+
+    print("===== 5 DONG DAU TIEN =====")
+    print(df.head())
+
+    print("\n===== KICH THUOC DU LIEU =====")
+    print("So dong:", df.shape[0])
+    print("So cot:", df.shape[1])
+
+    print("\n===== TEN CAC COT =====")
+    print(df.columns.tolist())
+
+    print("\n===== THONG TIN DU LIEU =====")
+    df.info()
+
+    print("\n===== GIA TRI THIEU =====")
+    print(df.isnull().sum())
+
+    print("\n===== DONG TRUNG LAP =====")
+    print(df.duplicated().sum())

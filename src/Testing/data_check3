@@ -1,0 +1,149 @@
+
+from pathlib import Path
+import ast
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# ==========================================
+# 1. DUONG DAN DU LIEU
+# ==========================================
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+DATA_PATH = PROJECT_DIR / "data" / "job_descriptions.csv"
+REPORT_DIR = PROJECT_DIR / "reports"
+FIGURE_DIR = REPORT_DIR / "figures"
+
+FIGURE_DIR.mkdir(parents=True, exist_ok=True)
+
+df = pd.read_csv(DATA_PATH)
+
+# ==========================================
+# 2. CHUAN HOA TEN VAI TRO
+# ==========================================
+df["it_role_type"] = df["it_role_type"].str.strip()
+
+role_mapping = {
+    "Fullstack Developer": "Full-stack Developer"
+}
+
+df["it_role_type"] = df["it_role_type"].replace(role_mapping)
+
+print("TOP 10 VAI TRO SAU KHI CHUAN HOA")
+print(df["it_role_type"].value_counts().head(10))
+
+# ==========================================
+# 3. CHUYEN CHUOI THANH DANH SACH
+# ==========================================
+def parse_list(value):
+    """Chuyen chuoi dang ['Python', 'Java'] thanh list."""
+    if pd.isna(value):
+        return []
+
+    if isinstance(value, list):
+        return value
+
+    try:
+        result = ast.literal_eval(str(value))
+        if isinstance(result, list):
+            return [
+                str(item).strip()
+                for item in result
+                if str(item).strip()
+            ]
+        return []
+    except (ValueError, SyntaxError):
+        return []
+
+
+df["languages_list"] = df["main_programming_languages"].apply(parse_list)
+df["technologies_list"] = df["key_technologies"].apply(parse_list)
+
+# ==========================================
+# 4. THONG KE NGON NGU VA CONG NGHE
+# ==========================================
+language_counts = (
+    df["languages_list"]
+    .explode()
+    .dropna()
+    .value_counts()
+)
+
+technology_counts = (
+    df["technologies_list"]
+    .explode()
+    .dropna()
+    .value_counts()
+)
+
+print("\nTOP 10 NGON NGU LAP TRINH")
+print(language_counts.head(10))
+
+print("\nTOP 10 CONG NGHE")
+print(technology_counts.head(10))
+
+# ==========================================
+# 5. VE BIEU DO TOP 10 VAI TRO
+# ==========================================
+role_counts = df["it_role_type"].value_counts().head(10)
+
+plt.figure(figsize=(11, 6))
+role_counts.sort_values().plot(kind="barh")
+plt.title("Top 10 IT Job Roles in Vietnam")
+plt.xlabel("Number of Job Postings")
+plt.ylabel("IT Role")
+plt.tight_layout()
+plt.savefig(FIGURE_DIR / "top_10_roles.png", dpi=150)
+plt.show()
+
+# ==========================================
+# 6. VE BIEU DO TOP 10 NGON NGU
+# ==========================================
+plt.figure(figsize=(10, 6))
+language_counts.head(10).sort_values().plot(kind="barh")
+plt.title("Top 10 Programming Languages in Job Postings")
+plt.xlabel("Number of Job Postings")
+plt.ylabel("Programming Language")
+plt.tight_layout()
+plt.savefig(FIGURE_DIR / "top_10_languages.png", dpi=150)
+plt.show()
+
+# ==========================================
+# 7. VE BIEU DO TOP 10 CONG NGHE
+# ==========================================
+plt.figure(figsize=(10, 6))
+technology_counts.head(10).sort_values().plot(kind="barh")
+plt.title("Top 10 Technologies in Job Postings")
+plt.xlabel("Number of Job Postings")
+plt.ylabel("Technology")
+plt.tight_layout()
+plt.savefig(FIGURE_DIR / "top_10_technologies.png", dpi=150)
+plt.show()
+
+# ==========================================
+# 8. LUU DU LIEU VA CAC BANG THONG KE
+# ==========================================
+df.to_csv(
+    REPORT_DIR / "jobs_cleaned.csv",
+    index=False,
+    encoding="utf-8-sig"
+)
+
+role_counts.to_csv(
+    REPORT_DIR / "role_counts_cleaned.csv",
+    header=["count"],
+    encoding="utf-8-sig"
+)
+
+language_counts.to_csv(
+    REPORT_DIR / "language_counts.csv",
+    header=["count"],
+    encoding="utf-8-sig"
+)
+
+technology_counts.to_csv(
+    REPORT_DIR / "technology_counts.csv",
+    header=["count"],
+    encoding="utf-8-sig"
+)
+
+print("\nDA HOAN THANH!")
+print("Du lieu va bieu do duoc luu trong thu muc reports.")

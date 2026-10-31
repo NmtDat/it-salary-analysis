@@ -1,0 +1,52 @@
+
+from pathlib import Path
+import pandas as pd
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+SKILL_FILE = ROOT_DIR / "reports" / "skill_salary_insights.csv"
+
+# Đọc bảng thống kê kỹ năng
+skills_df = pd.read_csv(SKILL_FILE)
+
+def recommend_skills(current_skills, top_n=5):
+    # Chuẩn hóa các kỹ năng người dùng đã biết
+    current_set = {
+        skill.strip().casefold()
+        for skill in current_skills.split(",")
+        if skill.strip()
+    }
+
+    # Chỉ gợi ý kỹ năng chưa có trong danh sách
+    candidates = skills_df[
+        ~skills_df["skill"].str.casefold().isin(current_set)
+    ].copy()
+
+    # Ưu tiên kỹ năng phổ biến hơn
+    candidates = candidates.sort_values(
+        ["job_count", "median_salary"],
+        ascending=[False, False],
+    )
+
+    return candidates.head(top_n)
+
+
+if __name__ == "__main__":
+    print("===== GỢI Ý KỸ NĂNG CNTT =====")
+
+    current_skills = input(
+        "Nhập kỹ năng bạn đã biết, cách nhau bằng dấu phẩy: "
+    )
+
+    suggestions = recommend_skills(current_skills)
+
+    print("\nCác kỹ năng nên tìm hiểu thêm:")
+    print(
+        suggestions[
+            ["skill", "job_count", "median_salary"]
+        ].to_string(index=False)
+    )
+
+    print(
+        "\nLưu ý: Gợi ý dựa trên tần suất kỹ năng và "
+        "mức lương quan sát được trong dữ liệu."
+    )

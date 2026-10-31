@@ -1,0 +1,1889 @@
+﻿technologies_list,count
+Git,731
+React,625
+Docker,587
+AWS,568
+PostgreSQL,492
+MySQL,490
+CI/CD,485
+RESTful APIs,449
+Agile,425
+Kubernetes,348
+MongoDB,336
+Microservices,322
+Spring Boot,281
+Node.js,264
+Redis,262
+Azure,254
+Scrum,223
+Vue.js,210
+GCP,203
+Angular,202
+Kafka,200
+Jira,181
+Oracle,137
+Not Specified,133
+Linux,129
+Next.js,117
+Flutter,99
+SQL,98
+Jenkins,95
+React Native,91
+.NET Core,90
+Laravel,88
+Hibernate,82
+Spring,77
+SQL Server,71
+Unity,67
+RabbitMQ,66
+TensorFlow,64
+Redux,64
+Selenium,61
+PyTorch,60
+AI,58
+.NET,57
+Bootstrap,56
+GraphQL,52
+Confluence,50
+Grafana,50
+Terraform,49
+FastAPI,48
+Webpack,48
+Figma,47
+NoSQL,47
+NestJS,47
+Entity Framework,46
+Postman,46
+Django,45
+Firebase,44
+Elasticsearch,42
+JIRA,40
+Flask,39
+ASP.NET,38
+Prometheus,37
+ReactJS,36
+Playwright,34
+jQuery,33
+DevOps,32
+Maven,32
+Google Cloud,31
+HTML/CSS,31
+Android,30
+Spark,30
+HTML5,30
+GitHub Actions,29
+Ansible,29
+GitHub,28
+CSS,28
+WordPress,28
+Odoo,26
+Airflow,26
+REST,25
+Spring Framework,25
+Blockchain,24
+Express,24
+Jest,24
+RESTful API,24
+Spring MVC,23
+Tailwind CSS,22
+WPF,22
+Cloud,22
+ElasticSearch,22
+API,22
+JavaScript,21
+MariaDB,21
+CSS3,21
+JSON,20
+Hadoop,20
+HTML,20
+NextJS,20
+Android Studio,20
+MS SQL Server,20
+WebSocket,20
+Appium,19
+REST APIs,18
+SOAP,18
+ERP,18
+gRPC,18
+Tailwind,18
+.NET Framework,18
+Gradle,18
+Cypress,17
+Azure DevOps,17
+Web API,17
+AngularJS,17
+SVN,17
+GitLab,17
+MVVM,17
+REST API,17
+ELK,16
+Ruby on Rails,16
+Nginx,16
+MVC,16
+MS SQL,15
+Vite,15
+Apache Kafka,15
+Xcode,14
+JUnit,14
+MSSQL,14
+LangChain,14
+Express.js,14
+Machine Learning,14
+GIT,14
+Power BI,14
+SQLite,14
+Mastercam,14
+iOS,13
+Databricks,13
+JMeter,13
+Tableau,13
+JPA,13
+SwiftUI,13
+JSP,13
+TypeScript,13
+Vue,13
+ASP.NET MVC,13
+Ant Design,13
+PLC,13
+CNC,13
+Celery,12
+React.js,12
+Keras,12
+OpenCV,12
+MQTT,12
+UIKit,12
+Restful API,12
+GitLab CI,12
+Babel,12
+Salesforce,12
+AutoCAD,12
+NX,12
+Nuxt.js,11
+Microsoft SQL Server,11
+Google Cloud Platform,11
+Active Directory,11
+CICD,11
+Realm,10
+Windows,10
+RESTful,10
+IoT,10
+Visual Studio,10
+Symfony,10
+Firewall,10
+ETL,10
+TCP/IP,10
+CodeIgniter,10
+JQuery,10
+SIEM,9
+APIs,9
+SCRUM,9
+Windows Server,9
+Slack,9
+MobX,9
+Swagger,9
+Adobe XD,9
+Waterfall,9
+SPI,9
+I2C,9
+Web3,9
+Jetpack Compose,9
+Web3.js,9
+Microsoft Azure,8
+Splunk,8
+Embedded Linux,8
+Pandas,8
+Python,8
+VMware,8
+Redmine,8
+SaaS,8
+Sentry,8
+Struts,8
+Clean Architecture,8
+WebRTC,8
+JWT,8
+RTOS,8
+FreeRTOS,8
+Material UI,8
+HMI,8
+SolidWorks,8
+Mocha,7
+TestRail,7
+Oracle Database,7
+Photoshop,7
+Cassandra,7
+OOP,7
+Zabbix,7
+Yocto,7
+Unreal Engine,7
+Shopify,7
+AUTOSAR,7
+Quarkus,7
+CloudFormation,7
+Robot Framework,7
+Trello,7
+Deep Learning,7
+Bitbucket,7
+Apache,7
+Flow,7
+Prisma,7
+UART,7
+GDB,7
+Coroutines,7
+Ubuntu,7
+Ethers.js,7
+OAuth2,7
+FFmpeg,7
+Swift Package Manager,7
+Websocket,7
+Redux-Saga,7
+Electron.js,7
+Mitsubishi,7
+Restful APIs,6
+Illustrator,6
+WinForms,6
+Apache Spark,6
+SAFe Agile,6
+Big Data,6
+LlamaIndex,6
+Datadog,6
+Postgres,6
+Java,6
+Spring Cloud,6
+Automation Testing,6
+ELK Stack,6
+Unix,6
+VPN,6
+MES,6
+dbt,6
+Coroutine,6
+CircleCI,6
+Nest.js,6
+Gitlab,6
+SCSS,6
+BigQuery,6
+Power Automate,6
+MyBatis,6
+SonarQube,6
+Scikit-learn,6
+Elementor,6
+Continuous Integration,6
+n8n,6
+NPM,6
+UML,6
+Zustand,6
+SASS,6
+OpenAPI Specification,6
+ESLint,6
+CAN,6
+Omron,6
+Cocos Creator,6
+MasterCAM,6
+Dapper,6
+CAD/CAM,6
+Apache Airflow,5
+BLE,5
+Unity 3D,5
+IDS/IPS,5
+Microsoft 365,5
+ITIL,5
+AI/ML,5
+Eclipse,5
+PL/SQL,5
+Miro,5
+SAP,5
+Cucumber,5
+DB2,5
+IAM,5
+MFC,5
+Nexus,5
+Katalon,5
+Google Workspace,5
+DynamoDB,5
+RxJS,5
+Security,5
+Microsoft Teams,5
+SQLAlchemy,5
+OpenSearch,5
+Sketch,5
+Fastlane,5
+Snowflake,5
+Iceberg,5
+Automation,5
+GitLab CI/CD,5
+React Testing Library,5
+MLOps,5
+OpenAI API,5
+Android SDK,5
+ASP.NET Core,5
+CakePHP,5
+React Hooks,5
+Recoil,5
+AJAX,5
+Google Maps,5
+TailwindCSS,5
+Zephyr,5
+Ethernet,5
+Ethereum,5
+Drupal,5
+RTSP,5
+CoreData,5
+Autocad,5
+Inventor,5
+Modbus,5
+Design Patterns,4
+BullMQ,4
+Excel,4
+XML,4
+Microsoft Office,4
+NIST,4
+Circle CI,4
+Unreal,4
+Outsystems,4
+Visio,4
+ADO.NET,4
+RTP,4
+Database,4
+Embedded Systems,4
+ServiceNow,4
+Talend,4
+Looker Studio,4
+SEO,4
+DevSecOps,4
+Wifi,4
+Push Notification,4
+Agile/Scrum,4
+S3,4
+ExpressJS,4
+CRM,4
+NetSuite,4
+Amazon Web Services,4
+RxJava,4
+Google Analytics,4
+Memcached,4
+Ionic,4
+TeamCity,4
+UiPath,4
+Windows 11,4
+Networking,4
+DBT,4
+Sass,4
+LESS,4
+Three.js,4
+UDP,4
+Proxmox,4
+scikit-learn,4
+ZK,4
+IOT,4
+Mockito,4
+Gulp,4
+Material Design,4
+Turbo,4
+Lerna,4
+Java Spring Boot,4
+Computer Vision,4
+OpenGL,4
+Servlet,4
+HTTP,4
+Hugging Face,4
+Microsoft Visual Studio,4
+Junit,4
+Solana,4
+GStreamer,4
+STM32,4
+Siemens,4
+Keyence,4
+SAP BTP,4
+Spring Security,4
+CoreAnimation,4
+ROS,4
+Solidworks,4
+CAM,4
+Fusion 360,4
+Oracle BI,4
+Solana Web3.js,4
+RS485,4
+RS232,4
+Ethernet TCP/IP,4
+Isar,4
+Confluent,4
+MinIO,4
+Dremio,4
+GoldenGate,4
+SAP Business Object,4
+OAuth,4
+Event-driven architecture,3
+Faktory,3
+HTMX,3
+PowerShell,3
+TestNG,3
+Network Security,3
+ChatGPT,3
+BI,3
+Gherkin,3
+SoapUI,3
+NHibernate,3
+Serenity BDD,3
+N8N,3
+Zapier,3
+Retrofit,3
+Microsoft Dynamics,3
+ISO27001,3
+WAF,3
+SOAR,3
+API Gateway,3
+Qt,3
+Cloudflare,3
+GitOps,3
+Rancher,3
+Magento,3
+Microcontrollers,3
+GitHub Action,3
+Office 365,3
+DevExtreme,3
+C++,3
+Server,3
+LAN,3
+NAS,3
+CentOS,3
+Flink,3
+Google Meet,3
+Gatsby,3
+Styled Components,3
+Serverless,3
+Monitoring,3
+Jetpack,3
+Room,3
+DLP,3
+SDLC,3
+Realtime OS,3
+OKHTTP,3
+Hive,3
+LINQ,3
+Test Driven Development,3
+Redshift,3
+XCode,3
+Apache Flink,3
+Test Complete,3
+Cisco,3
+DNS,3
+Manual Testing,3
+Luigi,3
+Data Analysis,3
+CISAM,3
+IPC,3
+Shared Memory,3
+EKS,3
+AKS,3
+API testing,3
+AWS RDS,3
+Windows 10,3
+WebGL,3
+WebdriverIO,3
+InVision,3
+Valgrind,3
+TCPDump,3
+Wireshark,3
+KVM,3
+Cocos,3
+Combine,3
+Google Firebase,3
+RxSwift,3
+PHP,3
+Espresso,3
+GetX,3
+Core Data,3
+Kibana,3
+Neo4j,3
+Elastic,3
+OpenAI,3
+Github,3
+Smart Contracts,3
+JavaEE,3
+NLP,3
+Observable,3
+Elastic Search,3
+Jetpack Component,3
+Servicenow,3
+DirectX,3
+Google,3
+Facebook,3
+CucumberJS,3
+Android Jetpack,3
+Adobe Illustrator,3
+OpenAPI,3
+Revit,3
+tRPC,3
+Kysely,3
+Infrastructure as Code,3
+RAG,3
+ActiveMQ,3
+API Management,3
+DeFi,3
+SpringMVC,3
+Alembic,3
+Rails,3
+BNB Chain,3
+J2EE,3
+Continuous Deployment,3
+Yii,3
+HLS,3
+Raspberry Pi,3
+Power Apps,3
+Cloud Services,3
+WCF,3
+Tomcat,3
+ABB,3
+ES6,3
+DevExpress,3
+Bash,3
+CAD,3
+Windows Forms,3
+Axios,3
+SolidCAM,3
+Siemens NX,3
+APM,3
+VS Code,3
+LWC,3
+Solidity,3
+Rust,3
+Hooks,3
+IIS,3
+CocoaPods,3
+Mapbox,3
+Message Queue,3
+SQLServer,3
+Automated Testing,2
+Performance Testing,2
+Security Testing,2
+Web APIs,2
+Kanban,2
+Samsung Galaxy Framework,2
+Adobe Creative Suite,2
+Threat Modeling,2
+BlackDuck Hub,2
+Business Intelligence,2
+API Testing,2
+CCNA,2
+OWASP,2
+CWE,2
+RPA,2
+Cloud Computing,2
+ISO 9001,2
+CMMi,2
+Azure Data Factory,2
+HubSpot,2
+AR/VR,2
+AWS CloudWatch,2
+PCIDSS,2
+EDR,2
+ISO 27001,2
+Maya,2
+Make,2
+Balsamiq,2
+Robot,2
+Cocos2d-x,2
+SAST,2
+DAST,2
+IAST,2
+Restful,2
+GRPC,2
+git,2
+Viem,2
+Caffe,2
+ClickHouse,2
+Azure Pipelines,2
+Pillow,2
+Cyber Security,2
+SharePoint,2
+Zend,2
+WebSockets,2
+Synapse,2
+ArgoCD,2
+CMS,2
+Atlassian,2
+WAN,2
+Microsoft Azure DevOps,2
+Nagios,2
+HDFS,2
+ClickUp,2
+Zoom,2
+Load Balancer,2
+Supabase,2
+Salesforce Commerce Cloud,2
+AWS QuickSight,2
+Airbyte,2
+C#,2
+Information Security,2
+Microsoft Intune,2
+Bitrise,2
+CloudWatch,2
+Angular CLI,2
+Zeplin,2
+Socket,2
+Burp Suite,2
+DHCP,2
+Camunda,2
+Dell,2
+PowerBI,2
+MaterialUI,2
+Azure SQL,2
+Google Cloud SQL,2
+Pytorch,2
+Design Thinking,2
+SSO,2
+MFA,2
+UX/UI,2
+Network,2
+Azure Service Bus,2
+Firebase Analytics,2
+Crashlytics,2
+A/B testing,2
+Oracle PL/SQL,2
+IntelliJ IDEA,2
+VueJS,2
+Router,2
+Switch,2
+Fortinet,2
+Continuous Delivery,2
+AV,2
+DRM,2
+TensorFlow Lite,2
+firewall,2
+CDN,2
+Linux/Unix,2
+Cybersecurity,2
+MS Office,2
+DMS,2
+Bloc,2
+GenAI,2
+Jboss,2
+Six Sigma,2
+XGBoost,2
+Katalon Studio,2
+Vercel,2
+Notion,2
+Antd,2
+NextJs,2
+MLflow,2
+Apache Tomcat,2
+IBM WebSphere,2
+Kubeflow,2
+Web Services,2
+Rx,2
+Backlog,2
+Admob,2
+containerization,2
+cloud,2
+New Relic,2
+Enzyme,2
+BIM,2
+Langflow,2
+FAISS,2
+Weaviate,2
+Qdrant,2
+SAP FIORI,2
+Relational databases,2
+Operating Systems,2
+.NET framework,2
+LIN,2
+NumPy,2
+ORM,2
+Java EE,2
+Vuex,2
+Alamofire,2
+TensorRT,2
+Jakarta EE,2
+AWS Redshift,2
+Qase,2
+Service Mesh,2
+RDBMS,2
+LLamaIndex,2
+Unix/Linux,2
+CMake,2
+TanStack Query,2
+Perfecto,2
+Applitools,2
+Roboelectric,2
+Artifactory,2
+HuggingFace,2
+MMDetection,2
+microservice,2
+USB,2
+SpringBoot,2
+smart contract,2
+Windows API,2
+Windows SDK,2
+RocksDB,2
+blockchain,2
+RDS,2
+Fast API,2
+P2P,2
+Jasmine,2
+Karma,2
+npm,2
+Windows Form,2
+WinUI3,2
+NodeJS,2
+Compose,2
+Apollo,2
+Composer,2
+DLMS Protocol,2
+ACF,2
+Divi,2
+Dataverse,2
+Chai,2
+Sketchup,2
+Visual C++,2
+Material Design UI,2
+WinUI,2
+Streamlit,2
+Gradio,2
+Yaskawa,2
+Inovance,2
+Servo,2
+Cimatrol,2
+OData Gateway,2
+CDS View,2
+CPI,2
+Fiori,2
+Adobe Forms,2
+BW/BO,2
+PI/PO,2
+SAP Workflows,2
+Oracle Apex,2
+MasterCam2020,2
+Concurrency,2
+GCD,2
+DRP,2
+etherCat,2
+Debian,2
+Visual Studio 2019,2
+Vscode,2
+Boost,2
+sqlite,2
+Unity 2D,2
+ethers.js,2
+Fanuc,2
+Context API,2
+Playable Ads,2
+Stripe,2
+PayPal,2
+VNPAY,2
+JSF,2
+PrimeFaces,2
+Postgresql,2
+Codelgniter,2
+Oracle DB,2
+C++ Builder,2
+VCL,2
+AWS IoTCore,2
+Clean Code,2
+Video.js,2
+HLS.js,2
+Ktor,2
+SQLDelight,2
+HFS,2
+SCADA,2
+Workato,2
+Visualforce,2
+Shell Script,2
+CMMI,2
+ISO26262,2
+A-spice,2
+Aurora PostgreSQL,2
+Pulumi,2
+Theia,2
+LLDB,2
+DASH,2
+Visi,2
+MasterCam,2
+Auto CAD,2
+ETL Pentaho,2
+ODI,2
+Cimatron,2
+Uniswap,2
+Aave,2
+UR robot,2
+Apollo Server,2
+RXSwift,2
+SnapKit,2
+Shell,2
+PID,2
+MODBUS RTU,2
+USART,2
+TIMER,2
+PWM,2
+ADC,2
+INTERRUPT,2
+MVC3,2
+Webservices,2
+Reselect,2
+PhoneGap,2
+Airtable,2
+Argo CD,2
+Crystal Report,2
+Visual Studio Code,2
+PHP Laravel,2
+OpenAI APIs,2
+Forguncy,2
+Powermill,2
+ARM,2
+SoC,2
+.NET MVC,2
+Shader/Shader Graph,2
+AssetBundles,2
+Java Swing,2
+JavaFX,2
+ElectronJs,2
+Microsoft SQL,2
+Shopify Liquid,2
+Blazor,2
+MVC5,2
+Tabular,2
+Lavarel,2
+ArtCAM,2
+SketchUp,2
+Geoserver,2
+HyperMill,2
+GAN,2
+Diffusion Models,2
+SAP Cloud Application Programming Model,2
+Fiori Elements,2
+SAPUI5,2
+OData,2
+Cloud Foundry,2
+HANA Cloud,2
+Web Service,2
+Asteria Warp,2
+PLSQL,2
+Tiktok,2
+Onesignal,2
+MCU,2
+Nordic chip,2
+ESP32,2
+Jetson,2
+PCB,2
+Lora/LoraWAN,2
+Zigbee,2
+Mitsu,2
+Siemen,2
+Requests,2
+FFMPEG,2
+GraphQL APIs,2
+Webhook,2
+Pub/Sub,2
+App Annie,2
+Sensor Tower,2
+HTTP client,2
+UI testing,2
+Eplan,2
+Vision,2
+ASP.Net,2
+REST/SOAP APIs,2
+Serverless Architecture,2
+xCode,1
+Objective-C,1
+JIRA Service Management,1
+Opsgenie,1
+FitNesse,1
+Canvas,1
+firewalls,1
+Soap UI,1
+Robot framework,1
+Power Platform,1
+After Effects,1
+UI Path,1
+WEB,1
+WAS,1
+Solarwinds,1
+ITSM,1
+Embedded,1
+Cybersecurity Engineering,1
+NIST CSF/RMF,1
+TARA,1
+Testcafe,1
+Apache-Spark,1
+draw.io,1
+figma,1
+Data Warehouse,1
+Azure Cloud,1
+Application Insights,1
+Azure Monitor,1
+MSCA,1
+Hardware Maintenance,1
+Software Development,1
+Adobe Suite,1
+ASIC,1
+CGMiner,1
+BFGMiner,1
+Pentesting,1
+Redteam,1
+Embedded Software,1
+Apache DevLake,1
+Canva AI,1
+CapCut AI,1
+Sybase,1
+Visily,1
+Draw.io,1
+Specflow,1
+Cryptography,1
+MPC,1
+Secure Hardware,1
+Expo,1
+Microsoft Fabric,1
+Azure Synapse,1
+Pipedream,1
+Chopper,1
+Dio,1
+Go Route,1
+no-code,1
+low-code,1
+Epicor,1
+Ticketing Systems,1
+Graylog,1
+Azure OpenAI,1
+Amazon Bedrock,1
+Google Vertex AI,1
+Hugging Face Transformers,1
+Oracle Flexcube,1
+SolarWinds,1
+AI plugins,1
+Legacy 3-tier architecture,1
+Cloud-Native,1
+FW,1
+IPS,1
+Entra ID,1
+Container,1
+AM,1
+Dynatrace,1
+AppDynamics,1
+EFK,1
+Blender,1
+Substance Painter,1
+QTest,1
+AR,1
+VR,1
+Yocto Build System,1
+cloud solutions,1
+Axure,1
+Protractor,1
+RestAssured,1
+Cocos2d-JS,1
+PhaserJS,1
+BytePlus,1
+Gcore,1
+ELK/Loki,1
+Grafana/Prometheus,1
+MVC Framework,1
+Asterisk,1
+VoIP,1
+SIP,1
+Data Studio,1
+IaC,1
+Containerization,1
+HTTPS,1
+TLS,1
+gitlab,1
+docker,1
+kubernetes,1
+BigCommerce,1
+Configuation Management Software,1
+Behave,1
+Foundry,1
+Hardhat,1
+Ether,1
+3D Game,1
+CockroachDB,1
+CS-Cart,1
+Cyber Security Engineer,1
+Cyber Security Analyst,1
+Ranorex,1
+Google Analytics 4,1
+Google Keyword Planner,1
+Screaming Frog,1
+GA4,1
+Search Console,1
+Google Natural Language API,1
+SSIS,1
+Azure Data Lake,1
+cloud computing,1
+core banking,1
+API platform,1
+data lake/warehouse,1
+AWS ECR,1
+AWS CodeArtifacts,1
+Sigrid,1
+VMWare ESXi,1
+Email Exchange Server,1
+SAN Storage,1
+Clickhouse,1
+Zephyr Scale,1
+Storm,1
+Nifi,1
+HBase,1
+Domain,1
+UDSonCAN,1
+OBD,1
+CANoe,1
+CANalyzer,1
+CMAKE,1
+.NET 8,1
+Dependency Injection,1
+Autofac,1
+NServiceBus,1
+Helm Charts,1
+Flexbox,1
+CocoaTouch,1
+Foundation,1
+AutoLayout,1
+Network Systems,1
+Firewalls,1
+Servers,1
+Switches,1
+Jetty,1
+Team City,1
+Monitoring Tools,1
+Command Line Interface,1
+Graphical User Interface,1
+Datastage,1
+Random Forest,1
+XGboost,1
+Neural Network,1
+LSTM,1
+LLM,1
+REST-assured,1
+Logging,1
+Tracing,1
+NetSecOps,1
+OSINT,1
+SCA,1
+SCM,1
+MDM,1
+IBM DB2,1
+AdMob,1
+IAP,1
+XML-RPC,1
+JSON-RPC,1
+MessageQueue,1
+Dell Boomi AtomSphere,1
+Workday,1
+COBIT,1
+Jira Service Management,1
+BI tools,1
+Data visualization,1
+BrowserStack,1
+CURL,1
+Data warehouse,1
+YARN,1
+Pigma,1
+Autify,1
+MagicPod,1
+Amazon Aurora,1
+CodePipeline,1
+CodeBuild,1
+ZenHub,1
+REST Assured,1
+Google Sheets,1
+TDD,1
+Salesforce APIs,1
+Salesforce Platform Developer 1,1
+Apple Connect,1
+Revenue Cat,1
+Elastic search,1
+PMP,1
+C,1
+Microsoft Entra ID,1
+Endpoint Central,1
+Cisco Secure Endpoint,1
+Tenable.io,1
+Nessus,1
+Istio,1
+LLMs,1
+ArcGIS Pro,1
+QGIS,1
+FME,1
+GeoServer,1
+GeoPandas,1
+Shapely,1
+MicroStation,1
+Winforms,1
+ASPICE,1
+server,1
+storage,1
+network,1
+wifi,1
+WooCommerce,1
+Data Bricks,1
+JFrog,1
+Sonarqube,1
+Semgrep,1
+BlackDuck,1
+Coverity,1
+Ceph,1
+Qlik,1
+QA,1
+LEAN,1
+Monday,1
+Web Applications,1
+Mobile Applications,1
+Rollup,1
+PHPUnit,1
+XDebug,1
+FireBase,1
+Dbt,1
+PMI,1
+Cobalt Strike,1
+BloodHound,1
+Sliver,1
+Havoc,1
+NTP,1
+Cacti,1
+PRTG,1
+PCI DSS,1
+Win Form Application,1
+Amazon,1
+Web Application,1
+Mongoose,1
+Bizagi,1
+HP,1
+Cisco UCS,1
+Lucidchart,1
+Visualization Tools,1
+[Not Specified],1
+Metabase,1
+Chef,1
+GKE,1
+Chatwork,1
+Automation Anywhere,1
+Load/Performance testing,1
+Laravel Dusk,1
+Jazz,1
+Microsoft Endpoint Manager,1
+Intune,1
+Configuration Manager,1
+GPO,1
+macOS,1
+KACE,1
+BitLocker,1
+ISTIO,1
+Prosemirror,1
+API automation testing,1
+Sklearn,1
+Glue,1
+Koa.js,1
+Shiftleft Testing,1
+Adobe Creative Cloud,1
+AI tools,1
+Canva,1
+Webflow,1
+Themeleaf,1
+Servlets,1
+Google Chronicle,1
+WebGPU,1
+AD,1
+Exchange,1
+Email,1
+Backup Systems,1
+Amazon SNS/SQS,1
+Azure Event Hubs,1
+Windows Event Forwarder,1
+Syslog,1
+Cribl,1
+Data lake,1
+BPMN,1
+App Store Optimization,1
+Caching mechanisms,1
+Rasa,1
+Dialogflow,1
+Tesseract,1
+Textract,1
+Google Cloud Vision,1
+Pact,1
+Group Policy,1
+Netbeans,1
+HP-UX,1
+Puppeteer,1
+CSV,1
+Microsoft Power Automate,1
+Tensorflow,1
+Microsoft Power BI,1
+Phaser,1
+PixiJS,1
+Internet Gateway,1
+Virtualization,1
+Juniper,1
+HPE,1
+Ruckus,1
+CheckPoint,1
+Kotlin Multiplatform,1
+Modularization,1
+Windows IIS,1
+Keycloak,1
+AWS Cognito,1
+Auth0,1
+Shell Scripts,1
+SAP CAP,1
+SAP UI5,1
+NAC,1
+EPP,1
+Data Security,1
+Cloud Security,1
+CoreML,1
+PyTorch Mobile,1
+Embedded system,1
+Cpanel,1
+DirectAdmin,1
+aaPanel,1
+VMware ESXi,1
+Cosmos,1
+WDIO,1
+Rest Assured,1
+BytePlus CDN,1
+Cloud-native solutions,1
+Anti-DDoS,1
+XDR,1
+PAM,1
+Endpoint Security,1
+PKI,1
+VLAN,1
+Structured Cabling,1
+Load Balancing,1
+Network Access Control,1
+Public Key Infrastructure,1
+Content Distribution Network,1
+Containers,1
+PaaS,1
+API development,1
+Google Tools,1
+WMS,1
+SignalR,1
+ADF,1
+Riverpod,1
+ML,1
+Auto Layout,1
+Storyboard,1
+Google Cloud Platform Services,1
+UserDefaults,1
+Corebank T24,1
+TCServer,1
+Websphere,1
+SASS/SCSS,1
+AWS Glue,1
+DataOps,1
+Web,1
+Mac OS,1
+Mobile,1
+3ds Max,1
+Apache Solr,1
+Beam,1
+Graphana,1
+Xen Citrix,1
+AI Tools,1
+SPC,1
+WEB API,1
+openCV,1
+OpenVZ,1
+Virtuozzo,1
+cPanel,1
+Fortigate,1
+Acronis,1
+LiveData,1
+Clerk,1
+Algolia,1
+Notion API,1
+Typeform,1
+D365,1
+Microsoft Project,1
+TMĐT,1
+Dropshipping,1
+Visual Paradigm,1
+Rive,1
+Protopie,1
+AKKA,1
+Oracle EBS,1
+UI-UX,1
+Packer,1
+Anti-Malware/Endpoint Protection,1
+IDS/IPS/Firewall,1
+RegeX,1
+Docker Compose,1
+Twig,1
+SPSS,1
+SAS,1
+Yii 2,1
+Angular.js,1
+MSSQL Server,1
+MVVC,1
+Cocos2dx,1
+Decentralized Applications,1
+Test Automation,1
+Beaver Builder,1
+GIMP,1
+Java Spring,1
+Intellij,1
+SQL Developer,1
+Exchange Server,1
+RESTful Web Services,1
+Google AI Studio,1
+Perplexity,1
+NotebookLM,1
+Fireflies,1
+Google Calendar,1
+Poe,1
+DGL,1
+PyG,1
+Onnx,1
+Git Flow,1
+MLFlow,1
+TritonServer,1
+TensorFlow Serving,1
+React-Router,1
+Oracle 11g,1
+Powerbuilder,1
+Tuxedo Middleware,1
+Web System,1
+E-commerce,1
+Database management,1
+Server configuration,1
+Data Mining,1
+Natural Language Processing,1
+SDL,1
+Godot,1
+No-SQL,1
+Google Sheet,1
+GoogleAppScript,1
+CircleCi,1
+NewRelic,1
+node.js,1
+Wagmi,1
+Domain-Driven Design,1
+Moodle,1
+Data & AI,1
+Facial Recognition,1
+Turnstile Control,1
+Lift Control,1
+Project Management,1
+DevOps tools,1
+Liquid,1
+ELV,1
+Aruba,1
+Palo Alto Networks,1
+OkHttp,1
+Trac,1
+Bugzilla,1
+Mantis,1
+Testlink,1
+Express JS,1
+Nest JS,1
+Sinon,1
+Webserver,1
+Scikit,1
+DL4J,1
+3D Modeling,1
+Redux Saga,1
+React Hook,1
+Primefaces,1
+Hbase,1
+SAP2000,1
+STAAD Pro,1
+Responsive Web Design,1
+API Design,1
+black box testing,1
+functional testing,1
+regression testing,1
+Hyper-V,1
+HTTP2,1
+AMQP,1
+Milvus,1
+Storage,1
+ETAS,1
+Vector,1
+Temenos Infinity,1
+MS-SQL,1
+Rest APIs,1
+Google Workplace,1
+Roblox,1
+VR/AR,1
+AI-powered coding tools,1
+Autoruns,1
+Procexp,1
+TCPView,1
+PCHunter,1
+firebase,1
+analystic,1
+jUnit,1
+Amazon Redshift,1
+SOA,1
+VSTS,1
+PaddleOCR,1
+Red Team,1
+Penetration Testing,1
+ReactNative,1
+Microfrontend,1
+Microsoft Office 365,1
+Azure AD,1
+Microsoft Exchange Server,1
+System Center Configuration Manager,1
+cocoapods,1
+TestFlight,1
+AFNetworking,1
+SNPE,1
+Tensor Core,1
+Mobile App,1
+Apollo GraphQL,1
+Oauth2,1
+CocoaLumberjack,1
+XcodeBuild,1
+Automation testing,1
+Performance testing,1
+Security testing,1
+Continuous Delivery/Deployment,1
+Java Persistence API,1
+NFC,1
+Vertx,1
+NiFi,1
+Google Maps API,1
+CSS Modules,1
+Ajax,1
+Cloud-native architectures,1
+Progress OpenEdge,1
+Progress Database,1
+Security Protocols,1
+Crypto Algorithms,1
+Rhapsody,1
+Polyspace,1
+WindIdea,1
+Davinci,1
+DOORs,1
+PTC,1
+Vector CANoe,1
+UDS,1
+Flash Bootloader,1
+Real Time Operating System,1
+ClientTrack,1
+Bubble,1
+Power App,1
+Charles,1
+AEM,1
+ElastiCache,1
+JPA2,1
+Hazelcast,1
+Vert.x,1
+DBWeaver,1
+Oracle SQL Developer,1
+Eslint,1
+TypeORM,1
+PGSQL,1
+Android NDK,1
+CameraX,1
+Edge Computing,1
+Real-time Computing,1
+Hardware-software Integration,1
+Mermaid.js,1
+PlantUML,1
+Kendo UI,1
+Nx,1
+TanStack Router,1
+TanStack Table,1
+React Hook Form,1
+Zod,1
+Radix-UI,1
+The Graph,1
+Arbitrum,1
+Optimism,1
+zkSync,1
+IPFS,1
+ENS,1
+WalletConnect,1
+PyQt,1
+Vuetify,1
+ProxySQL,1
+cloud-native architectures,1
+cloud-native,1
+ADAS,1
+Autonomous Driving,1
+Functional Safety Standards,1
+EVM,1
+Rest API,1
+websocket,1
+VSCode,1
+Less,1
+Alerta,1
+Yarn,1
+System Monitoring Tools,1
+CompTIA,1
+CISSP,1
+1Password,1
+CALS,1
+PLM,1
+PDM,1
+AWS S3,1
+Bluetooth,1
+WiFi,1
+Photo,1
+Video,1
+Audio,1
+File Management,1
+Cocoapods,1
+Rollbar,1
+smart contracts,1
+NGINX,1
+HAProxy,1
+Provider,1
+CodePush,1
+EJB,1
+Wildfly,1
+PL SQL,1
+Automotive,1
+SDLC Management Tools,1
+HuggingFace Transformers,1
+Distributed Systems,1
+Cloud Technologies,1
+Nuxt,1
+Windows Services,1
+Open Source,1
+Framework,1
+Looker,1
+Azure Devops,1
+Java Spring-Framework,1
+Firestore,1
+SQL server,1
+Google Drive Realtime API,1
+Realtime Database,1
+Cloud Firestore,1
+MUI,1
+Element Plus,1
+fetch,1
+axios,1
+ARM Toolchain,1
+NuxtJS,1
+Asana,1
+mSQL,1
+Mac,1
+Terragrunt,1
+Helm,1
+Amazon MQ,1
+AWS Networking,1
+AWS IAM Identity Center,1
+OIDC,1
+ViTest,1
+Storybook,1
+LoadRunner,1
+Magento 2,1
+Protobuf,1
+HTTP/2,1
+ICE,1
+STUN,1
+TURN,1
+RTCP,1
+SRTP,1
+SRT,1
+SCTP,1
+Benchmarking,1
+Encryption,1
+End-to-end encryption,1
+Unit Testing,1
+CAN Protocol,1
+Embedded Automotive Development,1
+Flux,1
+Prettier,1
+Jetson Devices,1
+Jmeter,1
+DApps,1
+Emulate3D,1
+OpenShift,1
+Jboss AS,1
+JetPack,1
+FreeIPA,1
+Fortify,1
+Snyk Code,1
+NUnit,1
+XUnit,1
+Data Pipeline,1
+Watermarking,1
+Arduino,1
+3D Max,1
+UI frameworks,1
+Kotlin Multiplatform Mobile,1
+MVI,1
+Ci/CD,1
+Backend Testing,1
+ASP.Net Core,1
+ASP.Net MVC,1
+.Net 6+,1
+Visual Studio 2022,1
+Testrail,1
+OCR,1
+Llama 2,1
+Gemma,1
+Langchain,1
+Cloud-native,1
+CUDA,1
+TFlite,1
+ONNX,1
+CATIA,1
+Vericut,1
+Black Box Testing,1
+Functional Testing,1
+Regression Testing,1
+Web/Mobile Testing,1
+UI Testing,1
+Corgi Engine,1
+GitHub Copilot,1
+Tabnine,1
+Boomi,1
+Hapi,1
+ELT,1
+BSP,1
+IOS,1
+AntDesign,1
+LangGraph,1
+Halcon,1
+Pylon,1
+Quality Assurance,1
+Jupyter Notebook,1
+PDB,1
+Google Kubernetes Engine,1
+Shaders,1
+yarn,1
+Microsoft,1
+vSAN,1
+OpenStack,1
+Karate,1
+AWS Device Farm,1
+Charles Proxy,1
+DevOps Azure,1
+SoCs,1
+manual testing,1
+automation testing,1
+performance testing,1
+bug-tracking systems,1
+Pen Testing,1
+Open API,1
+PySpark,1
+Delta Lake,1
+SAP AI Core,1
+SAP AI Launchpad,1
+SAP AI Business Services,1
+Vertex AI,1
+PAL,1
+APL,1
+Weight & Biases,1
+Svelte,1
+WPGraphQL,1
+G Suite,1
+GA360,1
+Secure Boot,1
+TrustZone,1
+MML,1
+XPath,1
+Apache HTTP Server,1
+Text-to-SQL,1
+PowerApps,1
+Restful Api,1
+Strut,1
+Apache Druid,1
+Big data,1
+EyeShot,1
+BSP Linux,1
+Network Topology,1
+DASHCAM,1
+MDVR,1
+Parcel,1
+CSS-in-JS,1
+Styled-components,1
+Servo motor,1
+Stepping motor,1
+robot cylinder,1
+MATLAB/Simulink,1
+MVI Architecture,1
+Thiết bị thông minh,1
+JSP Servlet,1
+backup,1
+Windows App,1
+Web App,1
+iOS App,1
+Plugin,1
+Ruby,1
+Chakra UI,1
+Doosan,1
+Makino,1
+Sodick,1
+CHMER,1
+Open Telemetry,1
+Game Development,1
+Coroutine/Rx,1
+Agile Scrum,1
+Industrial Printing,1
+Eclipse RCP,1
+Web-Based,1
+Machinery,1
+Linux kernel,1
+VMWare,1
+WSO2 API Manager,1
+Antd design,1
+Material,1
+Creo,1
+Docker Swarm,1
+Cloud Config,1
+Cloud Gateway,1
+Winform,1
+Console App,1
+VBA,1
+SOAP APIs,1
+API design,1
+EC2,1
+Lambda,1
+Vault,1
+AWS Secrets Manager,1
+Admob Mediation,1
+Metronic,1
+GPIB,1
+AutoCad,1
+Nexacro,1
+CLM,1
+WebAPI,1
+T-SQL,1
+Asp.net MVC,1
+Design Pattern,1
+Realtime,1
+SwiftPM,1
+Carthage,1
+StoreKit,1
+StoreKit2,1
+Entity Framework Core,1
+OpenTelemetry,1
+Microchip,1
+ST,1
+NXP,1
+Windows Service,1
+Responsive Design,1
+HIS,1
+LIS,1
+RIS,1
+EMR/EHR,1
+biomedical informatics,1
+Animation,1
+Particle System,1
+3D modeling,1
+Lighting,1
+Texturing,1
+ESP-IDF,1
+Cloud Native,1
+WebAssembly,1
+API RESTful,1
+MQ,1
+Event Streaming,1
+ESB,1
+Microservice,1
+Oracle warehouse builder,1
+x86,1
+Microsoft Excel,1
+Microsoft Word,1
+Microsoft Outlook,1
+OPC UA,1
+PTC CREO,1
+UNet,1
+Transformer,1
+GMES,1
+CIM,1
+Checkmarx,1
+P2P systems,1
+NAT traversal,1
+async systems,1
+tokio,1
+async-std,1
+State management,1
+Polarion,1
+Teamcenter,1
+PyCharm,1
+Enterprise Architect,1
+FPGA,1
+Cloud Infrastructure,1
+IoT Cloud,1
+webhook,1
+Aura,1
+SalesCloud,1
+Marketing Cloud,1
+Robotics,1
+CNC Programming,1
+Vtiger CRM,1
+Message Queues,1
+Ember,1
+Cloud Functions,1
+Cloud Storage,1
+Hyperledger,1
+ISO,1
+W3C Blockchain,1
+Cloud platforms,1
+Compose Multiplatform,1
+Ant,1
+UWP,1
+Jquery,1
+Core Data Services,1
+ShaderLab,1
+Socket Programming,1
+FOTA,1
+MVP,1
+Reanimated,1
+CREO,1
+Liferay,1
+Alfresco,1
+jBPM,1
+Activiti,1
+Pentaho,1
+jBOSS,1
+Microsoft PowerApps,1
+Canvas Apps,1
+Model-Driven Apps,1
+Spring framework,1
+AngularJs,1
+Mitsubishi M70,1
+M700,1
+M850,1
+Mastercam X5,1
+Mastercam 2018,1
+Mastercam 2021,1
+Photon,1
+Mirror,1
+Pydantic,1
+Solr,1
+Amazon CloudWatch,1
+AWS CLI,1
+DigitalOcean,1
+Rasp Pi,1
+Backbone JS,1
+Compose UI,1
+Unit testing,1
+Hibernate/JPA,1
+NPM/Yarn,1
+Solidwork,1
+Asynchronous Programming,1
+PC Tools,1
+Thymeleaf,1
+Oracle Warehouse Builder,1
+noSQL,1
+Angular Universal,1
+Cocos 2d-x,1
+Cad,1
+ExpressJs,1
+ABB Robot,1
+Spring Data,1
+MATLAB,1
+Simulink,1
+solidity,1
+cryptography,1
+Electronjs,1
+WPF UI,1
+SOLID,1
+Vue3,1
+REST/SOAP-based web services,1
+Vue Router,1
+Backup,1
+OAuth 2.0,1
+OpenID Connect,1
+API Services,1
+Visual Studio.NET,1
+Netty,1
+Apache MINA,1
+robot,1

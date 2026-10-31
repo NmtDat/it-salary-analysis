@@ -1,0 +1,96 @@
+from pathlib import Path
+import joblib
+import pandas as pd
+
+from sklearn.model_selection import train_test_split
+from sklearn.compose import ColumnTransformer
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.pipeline import Pipeline, make_pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.ensemble import RandomForestRegressor
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+
+DATA_FILE = ROOT_DIR / "data" / "tech_jobs_for_model.csv"
+MODEL_DIR = ROOT_DIR / "models"
+MODEL_FILE = MODEL_DIR / "salary_random_forest.joblib"
+
+MODEL_DIR.mkdir(parents=True, exist_ok=True)
+
+# Đọc dữ liệu
+df = pd.read_csv(DATA_FILE, low_memory=False)
+
+# Chuẩn hóa dữ liệu đầu vào
+df["technical_skills"] = (
+    df["technical_skills"].fillna("").astype(str)
+)
+df["job_title"] = df["job_title"].fillna("Không rõ")
+df["location"] = df["location"].fillna("Không rõ")
+
+X = df[
+    [
+        "job_title",
+        "location",
+        "experience_years",
+        "technical_skills",
+    ]
+]
+
+y = df["salary_avg_million"]
+
+# Chia dữ liệu với cùng cách chia ở bước đánh giá
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+# Tạo pipeline xử lý cột kinh nghiệm có kết hợp điền giá trị thiếu (Imputer)
+experience_pipeline = make_pipeline(
+    SimpleImputer(strategy="median"), 
+    StandardScaler()
+)
+
+preprocessor = ColumnTransformer(
+    transformers=[
+        (
+            "title_location",
+            OneHotEncoder(handle_unknown="ignore"),
+            ["job_title", "location"],
+        ),
+        (
+            "experience",
+            experience_pipeline,
+            ["experience_years"],
+        ),
+        (
+            "skills",
+            TfidfVectorizer(max_features=100),
+            "technical_skills",
+        ),
+    ]
+)
+
+pipeline = Pipeline(
+    steps=[
+        ("preprocessing", preprocessor),
+        (
+            "model",
+            RandomForestRegressor(
+                n_estimators=200,
+                random_state=42,
+                max_depth=8,
+                min_samples_leaf=2,
+            ),
+        ),
+    ]
+)
+
+# Huấn luyện lại trên tập huấn luyện
+pipeline.fit(X_train, y_train)
+
+# Lưu pipeline mới vào thư mục models/
+joblib.dump(pipeline, MODEL_FILE)
+
+print("Đã lưu mô hình tại:", MODEL_FILE)
+print("Số mẫu dùng để huấn luyện:", len(X_train))
+print("Số mẫu giữ lại để kiểm tra:", len(X_test))

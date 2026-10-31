@@ -1,0 +1,87 @@
+
+from pathlib import Path
+import pandas as pd
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+INPUT_FILE = ROOT_DIR / "data" / "it_jobs_cleaned.csv"
+OUTPUT_FILE = ROOT_DIR / "data" / "tech_jobs_for_model.csv"
+
+df = pd.read_csv(INPUT_FILE, low_memory=False)
+
+# Từ khóa nhận diện các vị trí kỹ thuật liên quan đến phần mềm,
+# dữ liệu, kiểm thử và vận hành hệ thống.
+keywords = [
+    "developer",
+    "software engineer",
+    "software developer",
+    "lập trình",
+    "backend",
+    "back-end",
+    "frontend",
+    "front-end",
+    "full-stack",
+    "fullstack",
+    "web developer",
+    "mobile developer",
+    "programmer",
+    "kỹ sư phần mềm",
+    "tester",
+    "qa engineer",
+    "quality assurance",
+    "data engineer",
+    "data scientist",
+    "data analyst",
+    "machine learning",
+    "ai engineer",
+    "artificial intelligence",
+    "devops",
+    "cloud engineer",
+    "database administrator",
+    "system administrator",
+    "quản trị hệ thống",
+    "an ninh mạng",
+    "cybersecurity",
+    "network engineer",
+    "kỹ thuật viên máy tính",
+    "it support",
+    "helpdesk",
+]
+
+# Chuẩn hóa chữ thường để tìm từ khóa
+title = df["job_title"].fillna("").astype(str).str.lower()
+
+pattern = "|".join(
+    pd.Series(keywords).str.replace(
+        r"([.*+?^${}()|\[\]\\])", r"\\\1", regex=True
+    )
+)
+
+mask = title.str.contains(pattern, regex=True, na=False)
+tech_df = df.loc[mask].copy()
+
+print("Số tin trước khi lọc chức danh:", len(df))
+print("Số tin sau khi lọc chức danh:", len(tech_df))
+print(
+    "Tỷ lệ giữ lại:",
+    round(len(tech_df) / len(df) * 100, 2),
+    "%"
+)
+
+print("\n===== TOP 30 CHỨC DANH SAU KHI LỌC =====")
+print(
+    tech_df["job_title"]
+    .value_counts()
+    .head(30)
+    .to_string()
+)
+
+print("\n===== THỐNG KÊ LƯƠNG (TRIỆU ĐỒNG) =====")
+print(tech_df["salary_avg_million"].describe())
+
+tech_df.to_csv(
+    OUTPUT_FILE,
+    index=False,
+    encoding="utf-8-sig"
+)
+
+print("\nĐã lưu dữ liệu tại:", OUTPUT_FILE)

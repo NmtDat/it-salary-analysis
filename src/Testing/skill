@@ -1,0 +1,167 @@
+
+from pathlib import Path
+import ast
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# 1. Xác định đường dẫn
+ROOT_DIR = Path(__file__).resolve().parent.parent
+
+INPUT_FILE = ROOT_DIR / "data" / "tech_jobs_for_model.csv"
+REPORT_DIR = ROOT_DIR / "reports"
+FIGURE_DIR = REPORT_DIR / "figures"
+
+FIGURE_DIR.mkdir(parents=True, exist_ok=True)
+
+# 2. Đọc dữ liệu
+df = pd.read_csv(INPUT_FILE, low_memory=False)
+
+# 3. Làm sạch cột kỹ năng
+def parse_skills(value):
+    if pd.isna(value):
+        return []
+
+    text = str(value).strip()
+
+    if not text:
+        return []
+
+    try:
+        skills = ast.literal_eval(text)
+
+        if isinstance(skills, list):
+            return [
+                str(skill).strip()
+                for skill in skills
+                if str(skill).strip()
+            ]
+    except (ValueError, SyntaxError):
+        pass
+
+    # Nếu dữ liệu không phải danh sách Python,
+    # thử tách các kỹ năng bằng dấu phẩy.
+    return [
+        skill.strip().strip("'\"[]")
+        for skill in text.split(",")
+        if skill.strip().strip("'\"[]")
+    ]
+
+
+df["skills_list"] = df["technical_skills"].apply(parse_skills)
+
+# 4. Đếm số tin có nhắc đến từng kỹ năng
+skill_records = []
+
+for _, row in df.iterrows():
+    # set() để một kỹ năng chỉ được tính
+    # tối đa một lần trong mỗi tin tuyển dụng.
+    unique_skills = {
+        skill.casefold(): skill
+        for skill in row["skills_list"]
+    }
+
+    for skill in unique_skills.values():
+        skill_records.append(
+            {
+                "skill": skill,
+                "salary": row["salary_avg_million"],
+            }
+        )
+
+skill_df = pd.DataFrame(skill_records)
+
+if skill_df.empty:
+    raise ValueError("Không tìm thấy kỹ năng trong dữ liệu.")
+
+# 5. Tổng hợp số tin và mức lương theo kỹ năng
+skill_summary = (
+    skill_df.groupby("skill")
+    .agg(
+        job_count=("salary", "size"),
+        median_salary=("salary", "median"),
+        mean_salary=("salary", "mean"),
+    )
+    .reset_index()
+)
+
+# Chỉ phân tích kỹ năng xuất hiện trong ít nhất 5 tin.
+# Điều này giảm ảnh hưởng của các kỹ năng quá hiếm.
+skill_summary = skill_summary[
+    skill_summary["job_count"] >= 5
+].copy()
+
+skill_summary["median_salary"] = (
+    skill_summary["median_salary"].round(2)
+)
+skill_summary["mean_salary"] = (
+    skill_summary["mean_salary"].round(2)
+)
+
+# 6. Xuất bảng kết quả
+skill_summary = skill_summary.sort_values(
+    "job_count", ascending=False
+)
+
+skill_summary.to_csv(
+    REPORT_DIR / "skill_salary_insights.csv",
+    index=False,
+    encoding="utf-8-sig",
+)
+
+print("\n===== 15 KỸ NĂNG PHỔ BIẾN NHẤT =====")
+print(
+    skill_summary.head(15)[
+        ["skill", "job_count", "median_salary", "mean_salary"]
+    ].to_string(index=False)
+)
+
+print("\n===== 15 KỸ NĂNG CÓ LƯƠNG TRUNG VỊ CAO NHẤT =====")
+high_salary_skills = (
+    skill_summary[skill_summary["job_count"] >= 10]
+    .sort_values("median_salary", ascending=False)
+    .head(15)
+)
+
+print(
+    high_salary_skills[
+        ["skill", "job_count", "median_salary", "mean_salary"]
+    ].to_string(index=False)
+)
+
+# 7. Biểu đồ kỹ năng phổ biến
+top_skills = skill_summary.head(10).sort_values("job_count")
+
+plt.figure(figsize=(10, 6))
+plt.barh(top_skills["skill"], top_skills["job_count"])
+plt.title("Top 10 kỹ năng xuất hiện trong tin tuyển dụng CNTT")
+plt.xlabel("Số tin tuyển dụng có nhắc đến kỹ năng")
+plt.ylabel("Kỹ năng")
+plt.tight_layout()
+
+plt.savefig(
+    FIGURE_DIR / "top_10_skills_salary_dataset.png",
+    dpi=150,
+)
+plt.close()
+
+# 8. Biểu đồ lương trung vị theo kỹ năng
+salary_plot = high_salary_skills.sort_values("median_salary")
+
+plt.figure(figsize=(10, 6))
+plt.barh(
+    salary_plot["skill"],
+    salary_plot["median_salary"],
+)
+plt.title("Mức lương trung vị theo kỹ năng")
+plt.xlabel("Lương trung vị (triệu đồng/tháng)")
+plt.ylabel("Kỹ năng")
+plt.tight_layout()
+
+plt.savefig(
+    FIGURE_DIR / "skill_median_salary.png",
+    dpi=150,
+)
+plt.close()
+
+print("\nĐã lưu bảng:", REPORT_DIR / "skill_salary_insights.csv")
+print("Đã lưu biểu đồ tại:", FIGURE_DIR)

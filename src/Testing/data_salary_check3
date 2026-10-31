@@ -1,0 +1,106 @@
+
+from pathlib import Path
+import re
+import pandas as pd
+
+ROOT_DIR = Path(__file__).resolve().parent.parent
+DATA_FILE = ROOT_DIR / "data" / "VietJobs.csv"
+OUTPUT_FILE = ROOT_DIR / "data" / "it_jobs_cleaned.csv"
+
+df = pd.read_csv(DATA_FILE, low_memory=False)
+
+print("Số tin ban đầu:", len(df))
+
+# 1. Chỉ giữ nhóm ngành CNTT
+it_df = df[
+    df["category"].str.strip().str.lower()
+    == "công_nghệ_thông_tin_kỹ_thuật_số"
+].copy()
+
+print("Số tin thuộc nhóm CNTT:", len(it_df))
+
+# 2. Chuyển cột lương sang dạng số
+for col in ["salary_min", "salary_max"]:
+    it_df[col] = pd.to_numeric(it_df[col], errors="coerce")
+
+# 3. Loại lương không hợp lệ:
+# - Thiếu lương
+# - Lương min hoặc max <= 0
+# - Lương min lớn hơn lương max
+valid_salary = (
+    it_df["salary_min"].notna()
+    & it_df["salary_max"].notna()
+    & (it_df["salary_min"] > 0)
+    & (it_df["salary_max"] > 0)
+    & (it_df["salary_min"] <= it_df["salary_max"])
+)
+
+before_salary_filter = len(it_df)
+it_df = it_df.loc[valid_salary].copy()
+
+print(
+    "Số tin bị loại do lương không hợp lệ:",
+    before_salary_filter - len(it_df)
+)
+
+# 4. Tạo mức lương trung bình từ khoảng lương min-max
+# Theo dữ liệu gốc, lương được ghi bằng "triệu".
+it_df["salary_avg_million"] = (
+    it_df["salary_min"] + it_df["salary_max"]
+) / 2
+
+# 5. Chuyển kinh nghiệm sang số năm
+def parse_experience(value):
+    if pd.isna(value):
+        return float("nan")
+
+    text = str(value).strip().lower()
+
+    if "không yêu cầu" in text:
+        return 0.0
+
+    # Ví dụ: 6 tháng, 18 tháng
+    month_match = re.search(r"(\d+(?:[.,]\d+)?)\s*tháng", text)
+    if month_match:
+        months = float(month_match.group(1).replace(",", "."))
+        return months / 12
+
+    # Ví dụ: 1 năm, 2 năm, 1.5 năm
+    year_match = re.search(r"(\d+(?:[.,]\d+)?)\s*năm", text)
+    if year_match:
+        return float(year_match.group(1).replace(",", "."))
+
+    # Không tự đoán nếu không nhận diện được định dạng
+    return float("nan")
+
+
+it_df["experience_years"] = (
+    it_df["experience_required"].apply(parse_experience)
+)
+
+# 6. Chuẩn hóa một số trường văn bản
+for col in ["job_title", "location", "technical_skills"]:
+    it_df[col] = it_df[col].fillna("").astype(str).str.strip()
+
+# 7. Thống kê chất lượng sau khi làm sạch
+print("\n===== KẾT QUẢ LÀM SẠCH =====")
+print("Số tin CNTT có lương hợp lệ:", len(it_df))
+print(
+    "Số tin chưa chuyển được kinh nghiệm:",
+    it_df["experience_years"].isna().sum()
+)
+print(
+    "Số tin thiếu kỹ năng:",
+    (it_df["technical_skills"] == "").sum()
+)
+
+print("\n===== THỐNG KÊ LƯƠNG (TRIỆU ĐỒNG) =====")
+print(it_df["salary_avg_million"].describe())
+
+print("\n===== TOP 15 VỊ TRÍ CNTT =====")
+print(it_df["job_title"].value_counts().head(15).to_string())
+
+# 8. Lưu kết quả
+it_df.to_csv(OUTPUT_FILE, index=False, encoding="utf-8-sig")
+
+print("\nĐã lưu dữ liệu tại:", OUTPUT_FILE)
